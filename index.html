@@ -313,7 +313,8 @@ details.older[open] > summary { margin-bottom: 1.5rem; }
 details.older > .pub-year + .pub-year, details.older > .pub-year { margin-top: 1.5rem; }
 @media (prefers-reduced-motion: reduce) { details.older > summary .chev { transition: none; } }
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1.25rem; }
-.gallery img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.gallery { align-items: start; }
+.gallery img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; }
 .home-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: stretch; }
 .home-pair h2 { font-size: var(--step-1); }
 .papers-tk .ticker-head { align-items: center; }
