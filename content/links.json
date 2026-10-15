@@ -1,0 +1,194 @@
+[
+  {
+    "group": "Finding papers",
+    "name": "Google Scholar",
+    "link": "https://scholar.google.com/",
+    "note": "Search the scientific literature"
+  },
+  {
+    "group": "Finding papers",
+    "name": "SciFinder",
+    "link": "https://scifinder-n.cas.org/",
+    "note": "Literature, compounds and reactions (UManitoba access)"
+  },
+  {
+    "group": "Finding papers",
+    "name": "Reaxys",
+    "link": "https://www.reaxys.com/",
+    "note": "Compounds, properties and reactions (UManitoba access)"
+  },
+  {
+    "group": "Finding papers",
+    "name": "Web of Science",
+    "link": "https://www.webofscience.com/",
+    "note": "Citation search (UManitoba access)"
+  },
+  {
+    "group": "Finding papers",
+    "name": "UManitoba Libraries",
+    "link": "https://umanitoba.ca/libraries",
+    "note": "Sign in for journal access off campus"
+  },
+  {
+    "group": "Crystallography software",
+    "name": "VESTA",
+    "link": "https://jp-minerals.org/vesta/en/",
+    "note": "Crystal structure visualization"
+  },
+  {
+    "group": "Crystallography software",
+    "name": "OLEX2",
+    "link": "https://olex.no/products/olex_software_en.html",
+    "note": "Single-crystal structure refinement"
+  },
+  {
+    "group": "Crystallography software",
+    "name": "SHELX",
+    "link": "https://shelx.uni-goettingen.de/download.php",
+    "note": "Structure solution and refinement"
+  },
+  {
+    "group": "Crystallography software",
+    "name": "GSAS-II",
+    "link": "https://subversion.xray.aps.anl.gov/trac/pyGSAS/wiki/InstallWindows",
+    "note": "Powder diffraction and Rietveld refinement"
+  },
+  {
+    "group": "Crystallography software",
+    "name": "FullProf",
+    "link": "https://www.ill.eu/sites/fullprof/",
+    "note": "Rietveld refinement of powder data"
+  },
+  {
+    "group": "Crystallography software",
+    "name": "checkCIF",
+    "link": "https://checkcif.iucr.org/",
+    "note": "Validate a CIF before you submit a paper"
+  },
+  {
+    "group": "Crystallography software",
+    "name": "Bilbao Crystallographic Server",
+    "link": "https://www.cryst.ehu.es/",
+    "note": "Space groups, symmetry and group–subgroup tools"
+  },
+  {
+    "group": "Crystallography software",
+    "name": "International Tables for Crystallography",
+    "link": "https://it.iucr.org/",
+    "note": "The reference for space groups"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "ICSD",
+    "link": "https://icsd.fiz-karlsruhe.de/",
+    "note": "Inorganic Crystal Structure Database (UManitoba access)"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "Crystallography Open Database",
+    "link": "https://www.crystallography.net/cod/",
+    "note": "Free crystal structures"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "Materials Project",
+    "link": "https://next-gen.materialsproject.org/",
+    "note": "Computed structures, band gaps and stability"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "OQMD",
+    "link": "https://oqmd.org/",
+    "note": "Open Quantum Materials Database"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "AFLOW",
+    "link": "https://aflowlib.org/",
+    "note": "Calculated materials properties"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "Topological Materials Database",
+    "link": "https://www.topologicalquantumchemistry.com/",
+    "note": "Topological classification of known materials"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "AtomWork",
+    "link": "https://crystdb.nims.go.jp/en/",
+    "note": "Inorganic structures and phase diagrams (NIMS)"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "NIST Chemistry WebBook",
+    "link": "https://webbook.nist.gov/chemistry/",
+    "note": "Thermochemical and spectral data"
+  },
+  {
+    "group": "Calculations and machine learning",
+    "name": "VASP",
+    "link": "https://www.vasp.at/",
+    "note": "DFT code for band structures and total energies"
+  },
+  {
+    "group": "Calculations and machine learning",
+    "name": "LOBSTER",
+    "link": "http://www.cohp.de/",
+    "note": "Chemical bonding analysis (COHP) from DFT"
+  },
+  {
+    "group": "Calculations and machine learning",
+    "name": "pymatgen",
+    "link": "https://pymatgen.org/",
+    "note": "Python library for materials analysis"
+  },
+  {
+    "group": "Calculations and machine learning",
+    "name": "matminer",
+    "link": "https://hackingmaterials.lbl.gov/matminer/",
+    "note": "Features and datasets for materials machine learning"
+  },
+  {
+    "group": "Calculations and machine learning",
+    "name": "Digital Research Alliance of Canada",
+    "link": "https://alliancecan.ca/",
+    "note": "National computing clusters for Canadian researchers"
+  },
+  {
+    "group": "Lab references",
+    "name": "Shannon ionic radii",
+    "link": "http://abulafia.mt.ic.ac.uk/shannon/ptable.php",
+    "note": "Effective ionic radii table"
+  },
+  {
+    "group": "Lab references",
+    "name": "FACT salt phase diagrams",
+    "link": "https://www.crct.polymtl.ca/fact/documentation/FTsalt/FTsalt_Figs.htm",
+    "note": "Phase diagrams for choosing a flux"
+  },
+  {
+    "group": "Lab references",
+    "name": "Ptable",
+    "link": "https://ptable.com/",
+    "note": "Interactive periodic table"
+  },
+  {
+    "group": "Lab references",
+    "name": "Vertere chemical inventory",
+    "link": "https://umanitoba.vimenterprise.com/uom",
+    "note": "UManitoba sign-in"
+  },
+  {
+    "group": "Writing and presenting",
+    "name": "ACS Style Guide",
+    "link": "https://pubs.acs.org/doi/book/10.1021/acsguide",
+    "note": "Conventions for chemistry writing"
+  },
+  {
+    "group": "Writing and presenting",
+    "name": "The Elements of Style",
+    "link": "https://www.gutenberg.org/ebooks/37134",
+    "note": "Classic short guide to clear writing"
+  }
+]

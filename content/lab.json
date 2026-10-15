@@ -1,0 +1,335 @@
+{
+  "name": "Functional Inorganic Materials Lab",
+  "tagline": "We make new chalcogenide crystals, solve their structures, and find out what they can do.",
+  "subtitle": "Synthesis of new semiconductors and quantum materials",
+  "welcome": "Our projects span infrared nonlinear optics, capturing heavy metals from water, and two-dimensional magnetism.",
+  "show_cycle": true,
+  "showcase": [
+    {
+      "photo": "images/showcase-structure.jpg",
+      "label": "New structures",
+      "text": "Compounds no one has made before, such as noncentrosymmetric Sr<sub>3</sub>As<sub>2</sub>S<sub>7</sub>."
+    },
+    {
+      "photo": "images/showcase-high-temp.jpg",
+      "label": "High-temperature reactions",
+      "text": "Elements sealed in silica tubes and heated to 700 °C and beyond."
+    },
+    {
+      "photo": "images/showcase-crystals.jpg",
+      "label": "Crystals",
+      "text": "Single crystals grown by flux and chemical vapor transport."
+    },
+    {
+      "photo": "images/showcase-machine-learning.jpg",
+      "label": "Machine learning",
+      "text": "A second route to new compounds: models that suggest what to make and predict properties such as band gaps before synthesis."
+    }
+  ],
+  "email": "abishek.iyer@umanitoba.ca",
+  "phone": "+1 204 474 7346",
+  "address": "Room 550, Department of Chemistry, University of Manitoba, Winnipeg, MB R3T 2N2, Canada",
+  "goatcounter": "iyerlab",
+  "hero_photo": "images/group-fall-2026-steps.jpg",
+  "hero_caption": "The Iyer Lab, Fall 2026",
+  "group_photo": "images/group-fall-2026-steps.jpg",
+  "group_photo_caption": "The Iyer Lab, Fall 2026",
+  "research_intro": "Only a small fraction of chemically possible inorganic compounds has ever been made. We make new ones and work out the crystal-chemical rules that govern how they form and what they can do.",
+  "areas": [
+    {
+      "tag": "Crystal growth",
+      "title": "Materials discovery and crystal growth",
+      "text": "Finding new chalcogenides and growing them as large, high-quality single crystals for property measurements.",
+      "photo": "images/area-powders.jpg"
+    },
+    {
+      "tag": "Photonics",
+      "title": "Infrared nonlinear optics",
+      "text": "Noncentrosymmetric chalcogenides and mixed-anion materials for infrared frequency conversion, lasers, sensing and photonics.",
+      "photo": "images/area-nlo-cartoon.svg"
+    },
+    {
+      "tag": "Environment",
+      "title": "Water remediation",
+      "text": "Metal chalcogenides and hybrids that capture toxic heavy metals from water, and how structure and bonding control their selectivity.",
+      "photo": "images/area-water-cartoon.svg"
+    },
+    {
+      "tag": "Quantum",
+      "title": "Two-dimensional quantum materials",
+      "text": "Low-dimensional chalcogenides where substitution, intercalation and structural control open up 2D magnetism and correlated electrons.",
+      "photo": "images/area-cvt-cartoon.svg"
+    }
+  ],
+  "methods": [
+    {
+      "title": "High-temperature synthesis",
+      "text": "Solid-state reactions, molten fluxes and chemical vapor transport to discover new compounds and grow high-quality single crystals."
+    },
+    {
+      "title": "Reactive flux synthesis",
+      "text": "Reactive phosphorus chalcogenide fluxes (P<sub>2</sub>S<sub>5</sub> and P<sub>2</sub>Se<sub>5</sub>) that assemble complex chalcogenide frameworks, cut some syntheses from months to hours and reach structures conventional methods cannot."
+    },
+    {
+      "title": "AI-guided discovery",
+      "text": "Machine learning combined with crystal chemistry, computational modelling and our own reaction data, including failed reactions, to predict which compounds to make next."
+    }
+  ],
+  "equipment": [
+    {
+      "title": "Sealing a reaction tube",
+      "text": "Reactants are sealed inside a silica tube under vacuum with a torch, ready for the furnace.",
+      "photo": "images/lab-sealing-poster.jpg",
+      "video": "images/lab-sealing.mp4"
+    },
+    {
+      "title": "Vacuum line",
+      "text": "A stainless-steel manifold and pump evacuate the tubes before sealing, so reactions run without air or moisture.",
+      "photo": "images/lab-vacuum-line.jpg",
+      "video": ""
+    },
+    {
+      "title": "Two-zone tube furnace",
+      "text": "Two independently controlled zones set up the temperature gradient for growing crystals by chemical vapor transport.",
+      "photo": "images/lab-tube-furnace.jpg",
+      "video": ""
+    },
+    {
+      "title": "Box furnaces",
+      "text": "Programmable furnaces run solid-state and flux reactions, often for days at a time.",
+      "photo": "images/lab-box-furnaces.jpg",
+      "video": ""
+    },
+    {
+      "title": "Muffle furnace",
+      "text": "Heats samples in air for annealing and preparing starting materials.",
+      "photo": "images/lab-box-furnace.jpg",
+      "video": ""
+    }
+  ],
+  "openings_intro": "No research experience needed to start. You learn by doing: making new compounds with your own hands, solving their structures, and finding out what they can do.",
+  "openings": [
+    {
+      "who": "Undergraduates",
+      "text": "Most students start in second or third year. There are three ways in:",
+      "steps": [
+        "CHEM 4710 honours project (fall and winter terms)",
+        "NSERC USRA summer research award (applications are usually due in winter for the following summer)",
+        "Summer or part-time volunteer projects"
+      ],
+      "send": "Your CV, an unofficial transcript, and a few lines on what interests you."
+    },
+    {
+      "who": "Graduate students (M.Sc. and Ph.D.)",
+      "text": "We look for curiosity about inorganic and structural chemistry. A strong cover letter and hands-on research experience in materials, inorganic or solid-state chemistry, or engineering matter more than grades alone.",
+      "steps": [
+        "Email Abishek first to talk about projects and funding",
+        "Apply through the UManitoba graduate program in Chemistry",
+        "Ask about fellowships such as NSERC CGS-M and the UM Graduate Fellowship"
+      ],
+      "send": "Your CV, transcripts, and a short statement of your research interests."
+    },
+    {
+      "who": "Postdoctoral scholars",
+      "text": "Candidates should have experience characterizing solids and a record of publishing research articles. Applicants with their own funding, such as an NSERC or Banting fellowship, are welcome.",
+      "steps": [
+        "Email Abishek to discuss a project idea",
+        "Plan a fellowship application together if you are applying for your own funding"
+      ],
+      "send": "Your CV, a short research statement, and contact details for two referees."
+    }
+  ],
+  "skills": [
+    {
+      "group": "Synthesis",
+      "items": [
+        "Weighing and sealing reactants in silica tubes under vacuum",
+        "Solid-state reactions in programmable furnaces",
+        "Flux and chemical vapor transport crystal growth",
+        "Air-free handling in a glovebox"
+      ]
+    },
+    {
+      "group": "Structure",
+      "items": [
+        "Powder X-ray diffraction and phase analysis",
+        "Single-crystal X-ray structure solution",
+        "Electron microscopy and elemental analysis (SEM-EDS)"
+      ]
+    },
+    {
+      "group": "Properties",
+      "items": [
+        "Band gaps from UV-vis-NIR spectroscopy",
+        "Second-harmonic generation for nonlinear optics",
+        "Thermal analysis (DTA)",
+        "Ion-exchange tests for water remediation"
+      ]
+    },
+    {
+      "group": "Computation (if you want it)",
+      "items": [
+        "DFT band structures and bonding analysis",
+        "Machine learning models that predict properties"
+      ]
+    },
+    {
+      "group": "Communication",
+      "items": [
+        "Presenting at group meetings",
+        "Posters and talks at national conferences",
+        "Writing and publishing papers"
+      ]
+    }
+  ],
+  "week": [
+    {
+      "title": "In the lab",
+      "text": "Most of the week is hands-on: preparing reactions, running furnaces, picking crystals and collecting X-ray data, with a postdoc or senior student nearby to help.",
+      "photo": "images/lab-sealing-poster.jpg"
+    },
+    {
+      "title": "Group meeting",
+      "text": "Every week we share results, practise talks, and work through problems together.",
+      "photo": ""
+    },
+    {
+      "title": "One-on-one with Abishek",
+      "text": "Regular meetings to look at your data, plan the next experiments, and talk about your goals.",
+      "photo": ""
+    },
+    {
+      "title": "Conferences",
+      "text": "Students present their own work at meetings such as the Canadian Chemistry Conference and the North American Solid State Chemistry Conference.",
+      "photo": "images/news-csc-2026-dewin-talk.jpg"
+    },
+    {
+      "title": "Group life",
+      "text": "Dinners, celebrations and end-of-summer get-togethers with the solid-state groups at UManitoba.",
+      "photo": "images/news-summer-2025-dinner.jpg"
+    }
+  ],
+  "funders": [
+    {
+      "name": "NSERC",
+      "detail": "Discovery Grant and Discovery Launch Supplement, 2025–2030: designing new solid-state compounds for energy-efficient technologies",
+      "logo": "images/logo-nserc.png",
+      "link": "https://www.nserc-crsng.gc.ca/"
+    },
+    {
+      "name": "Canada Research Chairs",
+      "detail": "Tier II CRC in Solid-state Materials for Sustainable Energy, 2024–2029",
+      "logo": "images/logo-crc.png",
+      "link": "https://www.chairs-chaires.gc.ca/"
+    },
+    {
+      "name": "Research Manitoba",
+      "detail": "New Investigator Award, 2025–2027: AI-driven metal sulfide ion exchangers for wastewater treatment",
+      "logo": "images/logo-research-manitoba.png",
+      "link": "https://researchmanitoba.ca/"
+    },
+    {
+      "name": "University of Manitoba",
+      "detail": "Host institution, Department of Chemistry",
+      "logo": "images/logo-umanitoba.png",
+      "link": "https://umanitoba.ca/"
+    },
+    {
+      "name": "Faculty of Science",
+      "detail": "Research support, University of Manitoba, 2024–2029",
+      "logo": "images/logo-um-science.png",
+      "link": "https://umanitoba.ca/science"
+    }
+  ],
+  "highlights": [
+    {
+      "label": "Infrared photonics",
+      "title": "A new family of infrared optical materials",
+      "text": "The first major discovery from the Iyer Lab. We made the first chalcoarsenate semiconductors in which As<sup>3+</sup> and As<sup>5+</sup> coexist, and showed that engineering arsenic coordination switches on one of the strongest nonlinear optical responses in this class of materials. The work sets out a new crystal-chemical design strategy for infrared photonics and was characterized with collaborators in South Korea. It was co-authored by lab members Vidyanshu Mishra and Manya Rishi (NSERC USRA).",
+      "image": "images/news-first-paper-chem-mater.png",
+      "citation": "Mishra et al., <em>Chemistry of Materials</em> 2026",
+      "link": "https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.5c02904",
+      "role": "Corresponding author · from the Iyer Lab",
+      "featured": true
+    },
+    {
+      "label": "Infrared lasers",
+      "title": "About 20 times the commercial benchmark",
+      "text": "A new synthetic route produced high-quality single crystals of γ-NaAs<sub>0.95</sub>Sb<sub>0.05</sub>Se<sub>2</sub>, one of the highest-performing infrared nonlinear optical semiconductors reported. Its response is about twenty times that of the commercial benchmark AgGaSe<sub>2</sub>.",
+      "image": "images/toc-afm-2022.png",
+      "citation": "Iyer et al., <em>Advanced Functional Materials</em> 2022",
+      "link": "https://onlinelibrary.wiley.com/doi/10.1002/adfm.202211969",
+      "role": "First author",
+      "featured": false
+    },
+    {
+      "label": "Clean water",
+      "title": "How lead and cadmium are captured from acidic water",
+      "text": "Crystallography and kinetic studies uncovered a previously unknown mechanism for the selective removal of toxic lead and cadmium by an ion-exchange material. The findings give design rules for better remediation materials and inspired the lab's AI-driven water remediation program in Manitoba.",
+      "image": "images/toc-jacs-2026.png",
+      "citation": "Pournara et al., <em>Journal of the American Chemical Society</em> 2026",
+      "link": "https://pubs.acs.org/doi/abs/10.1021/jacs.5c14558",
+      "role": "Co-author",
+      "featured": false
+    }
+  ],
+  "vision": "Our long-term goal is to turn inorganic materials discovery from trial and error into a predictive science. By combining data-driven design with experimental validation, we aim to find materials for infrared photonics, advanced semiconductors, quantum technologies and sustainable water remediation, while training scientists who are fluent in synthesis, crystallography, modelling and machine learning.",
+  "collaborators": [
+    {
+      "name": "Joshua Walsh",
+      "affiliation": "Chemistry, University of Manitoba",
+      "area": "Crystallography",
+      "group": "In Manitoba"
+    },
+    {
+      "name": "Mario Bieringer",
+      "affiliation": "Chemistry, University of Manitoba",
+      "area": "Computational chemistry",
+      "group": "In Manitoba"
+    },
+    {
+      "name": "Chris Wiebe",
+      "affiliation": "Chemistry, University of Winnipeg",
+      "area": "Quantum materials",
+      "group": "In Manitoba"
+    },
+    {
+      "name": "Christian Kuss",
+      "affiliation": "Chemistry, University of Manitoba",
+      "area": "Electrochemistry and battery materials",
+      "group": "In Manitoba"
+    },
+    {
+      "name": "Joon Jang",
+      "affiliation": "Sogang University, South Korea",
+      "area": "Nonlinear optics",
+      "group": "International"
+    },
+    {
+      "name": "Anastasia Pournara",
+      "affiliation": "Aristotle University of Thessaloniki, Greece",
+      "area": "Water remediation",
+      "group": "International"
+    },
+    {
+      "name": "Mercouri Kanatzidis",
+      "affiliation": "Northwestern University, USA",
+      "area": "Solid-state chemistry",
+      "group": "International"
+    }
+  ],
+  "gallery": [
+    {
+      "photo": "images/group-summer-2026.jpg",
+      "caption": "Summer 2026"
+    },
+    {
+      "photo": "images/group-fall-winter-2026.jpg",
+      "caption": "Fall 2025 and Winter 2026"
+    },
+    {
+      "photo": "images/group-summer-2025.jpg",
+      "caption": "Summer 2025"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="zone" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff7a3d"/><stop offset=".45" stop-color="#ffb347"/><stop offset=".55" stop-color="#ffd98a"/><stop offset="1" stop-color="#fff0b8"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#e5484d"/><stop offset="1" stop-color="#ffd166"/></linearGradient>
+    <marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#1f2433" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="640" height="360" fill="#eef4ff"/>
+  <text x="320" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2433">Chemical vapor transport</text>
+  <!-- furnace shells -->
+  <rect x="58" y="92" width="524" height="62" rx="12" fill="url(#zone)" stroke="#1f2433" stroke-width="3"/>
+  <rect x="58" y="214" width="524" height="62" rx="12" fill="url(#zone)" stroke="#1f2433" stroke-width="3"/>
+  <path d="M90 112 q10 -14 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#1f2433" stroke-width="2" opacity=".25"/>
+  <path d="M90 256 q10 14 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#1f2433" stroke-width="2" opacity=".25"/>
+  <path d="M320 92 V154 M320 214 V276" stroke="#1f2433" stroke-width="3" stroke-dasharray="6 6"/>
+  <!-- sealed silica tube -->
+  <rect x="40" y="154" width="560" height="60" rx="30" fill="#f7fbff" fill-opacity=".9" stroke="#1f2433" stroke-width="3"/>
+  <path d="M70 163 H560" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+  <!-- source powder (hot end) -->
+  <path d="M66 210 q20 -26 46 -22 q24 -10 46 6 q14 6 18 16 z" fill="#c9a227" stroke="#1f2433" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#8a5a1b"><circle cx="92" cy="203" r="3"/><circle cx="118" cy="198" r="2.5"/><circle cx="140" cy="203" r="3"/><circle cx="104" cy="208" r="2"/><circle cx="158" cy="206" r="2.5"/></g>
+  <!-- transport agent molecules -->
+  <g stroke="#1f2433" stroke-width="2">
+    <g transform="translate(206 176) rotate(-15)"><line x1="-8" y1="0" x2="8" y2="0"/><circle cx="-8" cy="0" r="6" fill="#8a5cf6"/><circle cx="8" cy="0" r="6" fill="#8a5cf6"/></g>
+    <g transform="translate(272 194) rotate(20)"><line x1="-8" y1="0" x2="8" y2="0"/><circle cx="-8" cy="0" r="6" fill="#8a5cf6"/><circle cx="8" cy="0" r="6" fill="#8a5cf6"/></g>
+    <g transform="translate(360 172) rotate(-5)"><line x1="-8" y1="0" x2="8" y2="0"/><circle cx="-8" cy="0" r="6" fill="#8a5cf6"/><circle cx="8" cy="0" r="6" fill="#8a5cf6"/></g>
+    <g transform="translate(424 196) rotate(25)"><line x1="-8" y1="0" x2="8" y2="0"/><circle cx="-8" cy="0" r="6" fill="#8a5cf6"/><circle cx="8" cy="0" r="6" fill="#8a5cf6"/></g>
+  </g>
+  <path d="M190 198 C 260 168, 330 206, 456 180" fill="none" stroke="#1f2433" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8" marker-end="url(#ah)"/>
+  <!-- crystals (cooler end) -->
+  <g stroke="#1f2433" stroke-width="2.5" stroke-linejoin="round">
+    <polygon points="480,212 492,186 512,182 520,204 506,212" fill="#bf4a6b"/>
+    <polygon points="492,186 512,182 506,194 494,196" fill="#ee8aa6"/>
+    <polygon points="522,212 530,192 548,190 556,206 548,212" fill="#9b2d4f"/>
+    <polygon points="530,192 548,190 544,198 532,200" fill="#d96a8a"/>
+    <polygon points="556,212 564,198 578,200 578,212" fill="#bf4a6b"/>
+  </g>
+  <path d="M500 168 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z M560 172 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#ffd166" stroke="#1f2433" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- labels -->
+  <text x="120" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2433">Source powder</text>
+  <text x="520" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2433">Crystals grow</text>
+  <text x="320" y="76" text-anchor="middle" font-size="15" font-weight="700" fill="#6b4fd8">I₂ carries the material</text>
+  <!-- temperature bar -->
+  <rect x="58" y="300" width="524" height="14" rx="7" fill="url(#bar)" stroke="#1f2433" stroke-width="2"/>
+  <text x="58" y="338" font-size="16" font-weight="700" fill="#1f2433">Hot zone, T₂</text>
+  <text x="582" y="338" text-anchor="end" font-size="16" font-weight="700" fill="#1f2433">Cooler zone, T₁</text>
+</svg>

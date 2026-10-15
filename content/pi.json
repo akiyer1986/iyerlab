@@ -1,0 +1,73 @@
+{
+  "name": "Abishek Kannan Iyer",
+  "photo": "images/abishek-iyer.jpg",
+  "title": "Canada Research Chair (Tier II) in Materials for Sustainable Energy and Assistant Professor, Department of Chemistry, University of Manitoba",
+  "bio": "",
+  "interests": [
+    "Chalcogenide semiconductors",
+    "Nonlinear optical materials",
+    "Quantum materials",
+    "Water remediation",
+    "AI in materials design",
+    "DFT calculations"
+  ],
+  "links": [
+    {
+      "label": "Google Scholar",
+      "link": "https://scholar.google.ca/citations?user=EGCZOowAAAAJ"
+    },
+    {
+      "label": "ORCID 0000-0002-8582-3895",
+      "link": "https://orcid.org/0000-0002-8582-3895"
+    }
+  ],
+  "career": [
+    {
+      "years": "2019–2024",
+      "role": "Postdoctoral scholar",
+      "place": "Northwestern University",
+      "with": "Mercouri Kanatzidis",
+      "with_link": "https://chemgroups.northwestern.edu/kanatzidis/"
+    },
+    {
+      "years": "2018–2019",
+      "role": "Postdoctoral scholar",
+      "place": "University of California, Riverside",
+      "with": "Boniface Fokwa",
+      "with_link": "https://fokwalab.ucr.edu/"
+    },
+    {
+      "years": "2013–2018",
+      "role": "Ph.D., Chemistry",
+      "place": "University of Alberta",
+      "with": "Arthur Mar",
+      "with_link": "https://apps.ualberta.ca/directory/person/amar"
+    },
+    {
+      "years": "2005–2010",
+      "role": "B.Sc. Chemistry and M.Sc. Inorganic Chemistry",
+      "place": "University of Delhi",
+      "with": "",
+      "with_link": ""
+    }
+  ],
+  "teaching": [
+    {
+      "course": "CHEM 4610",
+      "name": "Advanced Chemical Techniques: Crystallography"
+    },
+    {
+      "course": "CHEM 4100",
+      "name": "Materials Chemistry"
+    },
+    {
+      "course": "CHEM 7600",
+      "name": "Crystallography and its Applications"
+    }
+  ],
+  "citations": "911 citations on Google Scholar (June 2026)",
+  "awards": [
+    "Research Manitoba New Investigator Award, 2025–2027",
+    "NSERC Discovery Grant, 2025–2030"
+  ]
+}

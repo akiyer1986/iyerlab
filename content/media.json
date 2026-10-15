@@ -1,0 +1,56 @@
+[
+  {
+    "year": "",
+    "title": "Where do scientists get their ideas from?",
+    "outlet": "Science Lens podcast, UManitoba Faculty of Science",
+    "kind": "Podcast",
+    "link": "https://youtu.be/ZiNusVEG4TQ",
+    "photo": "images/media-podcast.jpg",
+    "on_home": true
+  },
+  {
+    "year": "2025",
+    "title": "AI-driven treatment of water: remediation solutions for Manitoba",
+    "outlet": "UManitoba Faculty of Science YouTube channel",
+    "kind": "Video",
+    "link": "https://youtu.be/wtuqX_Y5DDM",
+    "photo": "images/media-ai-water-video.jpg",
+    "on_home": true
+  },
+  {
+    "year": "2026",
+    "title": "Cleaning up toxic metals from mine and industrial runoff",
+    "outlet": "UM Today",
+    "kind": "Feature",
+    "link": "",
+    "photo": "",
+    "on_home": false
+  },
+  {
+    "year": "2026",
+    "title": "Chalcoarsenates: a promising family of infrared nonlinear optical materials",
+    "outlet": "Canadian Chemistry Conference, Toronto",
+    "kind": "Talk",
+    "link": "",
+    "photo": "",
+    "on_home": false
+  },
+  {
+    "year": "2025",
+    "title": "Design of new acentric compounds by tuning arsenic coordination in chalcoarsenates",
+    "outlet": "Invited talk, University of Winnipeg",
+    "kind": "Talk",
+    "link": "",
+    "photo": "",
+    "on_home": false
+  },
+  {
+    "year": "2025",
+    "title": "Tuning arsenic coordination to discover new noncentrosymmetric chalcoarsenates",
+    "outlet": "Canadian Chemistry Conference, Ottawa",
+    "kind": "Talk",
+    "link": "",
+    "photo": "",
+    "on_home": false
+  }
+]

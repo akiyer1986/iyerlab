@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Vidyanshu Mishra",
+    "group": "Postdoctoral scholars",
+    "role": "Postdoctoral scholar",
+    "since": "Summer 2024",
+    "email": "vidyanshu.mishra@umanitoba.ca",
+    "orcid": "0000-0002-8660-2859",
+    "website": "https://www.vidyanshumishra.com/about-me",
+    "photo": "images/vidyanshu-mishra.jpg",
+    "about": "Ph.D., University of Alberta; previously a research scientist at SeeO2 Energy. Works on X-ray crystallography, machine learning and quantum calculations, currently on chalcogenides for water remediation and ML-accelerated discovery.",
+    "outside_lab": "Enjoys photography."
+  },
+  {
+    "name": "Vinuja Gavin Fernando",
+    "group": "Graduate students",
+    "role": "Ph.D. student",
+    "since": "Summer 2026",
+    "email": "ferna103@myumanitoba.ca",
+    "orcid": "",
+    "photo": "images/vinuja-fernando.jpg",
+    "about": "M.S., Boston College. Designs noncentrosymmetric chalcogenides that combine lone-pair cations with other acentric building units.",
+    "outside_lab": "Into travel, politics, coin collecting, public speaking and teaching."
+  },
+  {
+    "name": "Subarna Mandal",
+    "group": "Graduate students",
+    "role": "Ph.D. student",
+    "since": "Fall 2026",
+    "email": "mandals2@myumanitoba.ca",
+    "orcid": "",
+    "photo": "images/subarna-mandal.jpg",
+    "about": "B.Sc. and M.Sc., Presidency University, Kolkata. Ion-exchange materials for water remediation and 2D materials grown by chemical vapor transport.",
+    "outside_lab": "Enjoys photography, writing, films and web series."
+  },
+  {
+    "name": "Dewin Randika Warnasinghe",
+    "group": "Graduate students",
+    "role": "M.Sc. student",
+    "since": "Fall 2025",
+    "email": "warnasdr@myumanitoba.ca",
+    "orcid": "",
+    "photo": "images/dewin-warnasinghe.jpg",
+    "about": "B.Sc., University of Manitoba. Works out design principles for making new noncentrosymmetric chalcogenides.",
+    "outside_lab": "Fan of horror and thriller films, and the Bourne series."
+  },
+  {
+    "name": "Kevin McGuinness",
+    "group": "Graduate students",
+    "role": "M.Sc. student",
+    "since": "Fall 2026",
+    "email": "mcguinnk@myumanitoba.ca",
+    "orcid": "",
+    "photo": "images/kevin-mcguinness.jpg",
+    "about": "B.Sc., Dalhousie University, with R&D experience in fuel cells, catalysis and radiopharmaceuticals. Uses machine learning to study ion-exchange selectivity and makes new chalcohalides.",
+    "outside_lab": "Gym, video games and TV."
+  },
+  {
+    "name": "Duong (Lily) Phan",
+    "group": "Undergraduate researchers",
+    "role": "Honours student, CHEM 4710",
+    "since": "Fall 2026",
+    "email": "",
+    "orcid": "",
+    "photo": "images/lily-phan.jpg",
+    "about": "Active-learning-guided discovery of chalcohalides using halide fluxes.",
+    "outside_lab": ""
+  },
+  {
+    "name": "Joshua Neufeld",
+    "group": "Undergraduate researchers",
+    "role": "Honours student, CHEM 4710",
+    "since": "Fall 2026",
+    "email": "",
+    "orcid": "",
+    "photo": "images/joshua-neufeld.jpg",
+    "about": "New thiophosphate materials by reactive flux synthesis.",
+    "outside_lab": ""
+  }
+]
