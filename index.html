@@ -99,7 +99,21 @@ section.page { display: grid; gap: 3rem; }
 .showcase figcaption span { color: var(--muted); font-size: 0.9rem; }
 @media (max-width: 960px) { .showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .showcase { gap: 0.6rem; } .showcase figcaption span { display: none; } }
-.welcome { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+.welcome { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 3rem; align-items: center; }
+.welcome-art { min-width: 0; width: 100%; max-width: 34rem; justify-self: end; }
+.welcome-art .cycle-return { display: none; }
+.welcome-art .cycle-support { max-width: none; margin: 1.6rem 0 0; }
+@media (min-width: 761px) {
+  .welcome-art .cycle { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: "a b" "d c"; gap: 2.6rem 2.4rem; max-width: none; }
+  .welcome-art .cycle-step:nth-child(1) { grid-area: a; } .welcome-art .cycle-step:nth-child(2) { grid-area: b; }
+  .welcome-art .cycle-step:nth-child(3) { grid-area: c; } .welcome-art .cycle-step:nth-child(4) { grid-area: d; }
+  .welcome-art .cycle-step .art::after { display: none; }
+  .welcome-art .cycle-step::after { position: absolute; font: 700 1.4rem/1 var(--font-display); color: var(--sulfur-ink); }
+  .welcome-art .cycle-step:nth-child(1)::after { content: "→"; right: -1.75rem; top: 28%; }
+  .welcome-art .cycle-step:nth-child(2)::after { content: "↓"; left: 50%; bottom: -2.1rem; transform: translateX(-50%); }
+  .welcome-art .cycle-step:nth-child(3)::after { content: "←"; left: -1.75rem; top: 28%; }
+  .welcome-art .cycle-step:nth-child(4)::after { content: "↑"; left: 50%; top: -2.1rem; transform: translateX(-50%); }
+}
 .welcome > div { display: grid; gap: 0.9rem; max-width: 46rem; }
 .welcome .lede { font-size: var(--step-1); color: var(--ink); }
 .welcome .lede em { font-style: normal; color: var(--sulfur-ink); }
@@ -320,11 +334,13 @@ details.older > .pub-year + .pub-year, details.older > .pub-year { margin-top: 1
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1.25rem; }
 .gallery { align-items: start; }
 .gallery img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; }
-.home-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+.home-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: stretch; }
+.home-pair > .ticker { align-self: stretch; align-content: start; grid-template-rows: auto 1fr auto; }
 .home-pair h2 { font-size: var(--step-1); }
-.papers-tk .ticker-head { align-items: center; }
+.home-pair .ticker-head { align-items: center; }
 .papers-tk .pdesc { font-size: 0.9rem; color: var(--muted); }
-.papers-tk .tslide img { aspect-ratio: auto; height: 10.5rem; object-fit: contain; background: #fff; }
+.home-pair .tslide img { aspect-ratio: 16 / 9; }
+.papers-tk .tslide img { object-fit: contain; background: #fff; }
 .funders-mini { display: grid; gap: 0.9rem; align-content: start; padding: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); align-self: stretch; }
 .funders-mini .logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 6rem; gap: 0.8rem; }
 .funders-mini .logos > :last-child:nth-child(odd) { grid-column: 1 / -1; }
@@ -332,6 +348,10 @@ details.older > .pub-year + .pub-year, details.older > .pub-year { margin-top: 1
 .funders-mini .logos > a:hover { border-color: var(--sulfur); }
 .funders-mini img { display: block; max-height: 4.4rem; max-width: 100%; width: auto; height: auto; object-fit: contain; }
 .funders-mini span { font-size: 0.85rem; color: #1f2433; }
+.funders-row { padding: 0; background: none; border: 0; }
+.funders-row .logos { grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); grid-auto-rows: 5.5rem; }
+.funders-row .logos > :last-child:nth-child(odd) { grid-column: auto; }
+.funders-row img { max-height: 3.8rem; }
 @media (max-width: 860px) { .home-pair { grid-template-columns: minmax(0, 1fr); } }
 .funders { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1.25rem; }
 .funder { display: grid; gap: 0.3rem; align-content: start; padding-top: 0.9rem; border-top: 2px solid var(--sulfur); }
@@ -433,7 +453,7 @@ const ticker = () => {
   if (!items.length) return "";
   const verb = k => ({ Podcast: "Listen", Video: "Watch" })[k] || "Open";
   return `<aside class="ticker" aria-roledescription="carousel" aria-label="Latest news">
-        <div class="ticker-head"><p class="eyebrow">Latest news</p><a href="#news">All news</a></div>
+        <div class="ticker-head"><h2>Latest news</h2><a href="#news">All news</a></div>
         <div class="ticker-slides" aria-live="polite">${items.map((n, i) => `
           <article class="tslide${i ? "" : " on"}${n.photo ? "" : " text-only"}" aria-roledescription="slide" aria-label="${i + 1} of ${items.length}"${i ? ' aria-hidden="true"' : ""}>
             ${n.type === "media"
@@ -556,6 +576,12 @@ const fundersCompact = () => (SITE.lab.funders || []).length ? `
         return f.link ? `<a href="${esc(f.link)}" title="${esc(f.name)}">${inner}</a>` : `<div title="${esc(f.name)}">${inner}</div>`;
       }).join("")}</div></div>` : "";
 
+const fundersRow = () => (SITE.lab.funders || []).length ? `
+    <div class="split"><div><h2>Supported by</h2></div><div class="funders-mini funders-row"><div class="logos">${SITE.lab.funders.map(f => {
+        const inner = f.logo ? `<img src="${esc(f.logo)}" alt="${esc(f.name)}" loading="lazy">` : `<span>${f.name}</span>`;
+        return f.link ? `<a href="${esc(f.link)}" title="${esc(f.name)}">${inner}</a>` : `<div title="${esc(f.name)}">${inner}</div>`;
+      }).join("")}</div></div></div>` : "";
+
 const funders = () => (SITE.lab.funders || []).length ? `
     <div class="split"><div><h2>Supported by</h2></div>
       <div class="funders">${SITE.lab.funders.map(f => `<div class="funder">${f.logo ? `<img src="${esc(f.logo)}" alt="${esc(f.name)} logo" loading="lazy">` : ""}<b>${f.link ? `<a href="${esc(f.link)}">${f.name}</a>` : f.name}</b><span>${f.detail || ""}</span></div>`).join("")}</div></div>` : "";
@@ -599,14 +625,6 @@ const pages = {
       <h1>${SITE.lab.name}</h1>
       ${SITE.lab.subtitle ? `<p class="subhead">${SITE.lab.subtitle}</p>` : ""}
     </div>
-    ${SITE.lab.show_cycle !== false ? cycle() : (SITE.lab.showcase || []).length
-      ? `<div class="showcase">${SITE.lab.showcase.map(x => `<figure><img src="${esc(x.photo)}" alt="${esc(x.label)}"><figcaption><b>${x.label}</b>${x.text ? `<span>${x.text}</span>` : ""}</figcaption></figure>`).join("")}</div>`
-      : SITE.lab.hero_photo
-      ? `<figure class="banner"><img src="${esc(SITE.lab.hero_photo)}" alt="${esc(SITE.lab.hero_caption || "")}">${SITE.lab.hero_caption ? `<figcaption>${SITE.lab.hero_caption}</figcaption>` : ""}</figure>`
-      : `<figure class="lattice" style="margin:0">
-      <canvas id="lattice" aria-label="A slowly rotating model of a tetrahedral crystal lattice" role="img"></canvas>
-      <figcaption><span><i><span class="dot" style="background:var(--selenium)"></span>M</i>&nbsp;&nbsp;<i><span class="dot" style="background:var(--sulfur)"></span>Q = S, Se</i></span><span>MQ<sub>4</sub> tetrahedra</span></figcaption>
-    </figure>`}
     <div class="welcome">
       <div>
         <h2>Welcome to the Iyer Lab</h2>
@@ -618,9 +636,18 @@ const pages = {
           <a class="btn" href="#openings">Join the lab</a>
         </div>
       </div>
-      ${ticker()}
+      <div class="welcome-art">
+    ${SITE.lab.show_cycle !== false ? cycle() : (SITE.lab.showcase || []).length
+        ? `<div class="showcase">${SITE.lab.showcase.map(x => `<figure><img src="${esc(x.photo)}" alt="${esc(x.label)}"><figcaption><b>${x.label}</b>${x.text ? `<span>${x.text}</span>` : ""}</figcaption></figure>`).join("")}</div>`
+        : SITE.lab.hero_photo
+        ? `<figure class="banner"><img src="${esc(SITE.lab.hero_photo)}" alt="${esc(SITE.lab.hero_caption || "")}">${SITE.lab.hero_caption ? `<figcaption>${SITE.lab.hero_caption}</figcaption>` : ""}</figure>`
+        : `<figure class="lattice" style="margin:0">
+        <canvas id="lattice" aria-label="A slowly rotating model of a tetrahedral crystal lattice" role="img"></canvas>
+        <figcaption><span><i><span class="dot" style="background:var(--selenium)"></span>M</i>&nbsp;&nbsp;<i><span class="dot" style="background:var(--sulfur)"></span>Q = S, Se</i></span><span>MQ<sub>4</sub> tetrahedra</span></figcaption>
+      </figure>`}
+      </div>
     </div>
-    <div class="home-pair">${paperTicker()}${fundersCompact()}</div>
+    <div class="home-pair">${paperTicker()}${ticker()}</div>
     ${contact()}`,
 
   research: () => `
@@ -631,6 +658,7 @@ const pages = {
     ${(SITE.lab.equipment || []).length ? `<div class="split"><div><h2>Our equipment</h2></div>
       <div class="equip">${SITE.lab.equipment.map(e => `<figure>${e.video ? `<video src="${e.video}" poster="${e.photo}" controls muted playsinline preload="none"></video>` : `<img src="${e.photo}" alt="${e.title}" loading="lazy">`}<figcaption><b>${e.title}</b><span>${e.text}</span></figcaption></figure>`).join("")}</div></div>` : ""}
     ${SITE.lab.vision ? `<div class="split"><div><h2>Our vision</h2></div><p class="vision">${SITE.lab.vision}</p></div>` : ""}
+    ${fundersRow()}
     ${(SITE.lab.collaborators || []).length ? `<div class="split"><div><h2>Who we work with</h2></div>
       <div class="links">${groupBy(SITE.lab.collaborators, "group", ["In Manitoba", "International"]).map(g => `<div><h3 class="eyebrow">${g.key}</h3><ul class="plain">${g.items.map(c => `<li><b>${c.name}</b><small>${c.affiliation}${c.area ? ` · ${c.area}` : ""}</small></li>`).join("")}</ul></div>`).join("")}</div></div>` : ""}
     ${paperHighlights()}`,
