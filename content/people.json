@@ -12,6 +12,17 @@
     "outside_lab": "Enjoys photography."
   },
   {
+    "name": "Dewin Randika Warnasinghe",
+    "group": "Graduate students",
+    "role": "M.Sc. student",
+    "since": "Fall 2025",
+    "email": "warnasdr@myumanitoba.ca",
+    "orcid": "",
+    "photo": "images/dewin-warnasinghe.jpg",
+    "about": "B.Sc., University of Manitoba. Works out design principles for making new noncentrosymmetric chalcogenides.",
+    "outside_lab": "Fan of horror and thriller films, and the Bourne series."
+  },
+  {
     "name": "Vinuja Gavin Fernando",
     "group": "Graduate students",
     "role": "Ph.D. student",
@@ -32,17 +43,6 @@
     "photo": "images/subarna-mandal.jpg",
     "about": "B.Sc. and M.Sc., Presidency University, Kolkata. Ion-exchange materials for water remediation and 2D materials grown by chemical vapor transport.",
     "outside_lab": "Enjoys photography, writing, films and web series."
-  },
-  {
-    "name": "Dewin Randika Warnasinghe",
-    "group": "Graduate students",
-    "role": "M.Sc. student",
-    "since": "Fall 2025",
-    "email": "warnasdr@myumanitoba.ca",
-    "orcid": "",
-    "photo": "images/dewin-warnasinghe.jpg",
-    "about": "B.Sc., University of Manitoba. Works out design principles for making new noncentrosymmetric chalcogenides.",
-    "outside_lab": "Fan of horror and thriller films, and the Bourne series."
   },
   {
     "name": "Kevin McGuinness",

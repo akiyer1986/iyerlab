@@ -60,7 +60,7 @@ nav.main a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 
 
 main { padding-block: 2.5rem 4rem; }
 section.page { display: grid; gap: 3rem; }
-.page-head { display: grid; gap: 0.75rem; max-width: 46rem; }
+.page-head { display: grid; gap: 0.75rem; max-width: 62rem; }
 .page-head p { color: var(--muted); font-size: var(--step-1); line-height: 1.5; }
 
 /* Home hero */
@@ -151,12 +151,13 @@ section.page { display: grid; gap: 3rem; }
 .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
 
 /* Research areas */
-.areas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .area { background: var(--surface); padding: 1.5rem; display: grid; gap: 0.5rem; align-content: start; }
 .area .eyebrow { color: var(--sulfur-ink); }
 .area p { color: var(--muted); }
-.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2rem; align-items: start; }
-.split > div:first-child { display: grid; gap: 0.5rem; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.split > div:first-child { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1.25rem; }
+.split > div:first-child > p { max-width: 46rem; }
 
 /* News */
 .news-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
@@ -174,7 +175,11 @@ section.page { display: grid; gap: 3rem; }
 .pi { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 2rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; }
 .pi .bio { display: grid; gap: 0.9rem; max-width: 42rem; }
 .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.chip { font-size: 0.85rem; padding: 0.2rem 0.6rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+.chip { font-size: 1rem; padding: 0.3rem 0.8rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: var(--bg); }
+.pi-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
+.icon-link { display: inline-flex; width: 2rem; height: 2rem; border-radius: 50%; }
+.icon-link svg { width: 100%; height: 100%; }
+.icon-link:hover { opacity: 0.8; }
 .avatar { width: 100%; aspect-ratio: 1; max-width: 100%; border-radius: var(--radius); background: var(--bg); border: 1px solid var(--line); display: grid; place-items: center; font: 700 1.6rem/1 var(--font-display); color: var(--muted); overflow: hidden; }
 .avatar img { width: 100%; height: 100%; object-fit: cover; }
 .group { display: grid; gap: 1.25rem; }
@@ -222,7 +227,7 @@ ol.pubs .j em { font-style: italic; }
 .me { box-shadow: inset 0 -0.35em 0 color-mix(in srgb, var(--sulfur) 30%, transparent); }
 
 /* Openings, links, contact */
-.equip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.equip { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 1.25rem; }
 .equip figure { margin: 0; display: grid; gap: 0.6rem; align-content: start; }
 .equip img, .equip video { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); background: #111; }
 .equip figcaption { display: grid; gap: 0.2rem; }
@@ -233,11 +238,11 @@ ol.pubs .j em { font-style: italic; }
 .role-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; display: grid; gap: 0.6rem; align-content: start; }
 .role-card p { color: var(--muted); }
 .roles .role-card { align-content: start; }
-.split .roles { grid-template-columns: minmax(0, 1fr); }
+.split .roles { grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
 .role-card .steps { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.3rem; }
 .role-card .steps li::marker { color: var(--sulfur-ink); }
 .role-card .send { color: var(--ink); font-size: 0.95rem; background: var(--bg); border-radius: var(--radius); padding: 0.55rem 0.75rem; }
-.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1rem; }
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: 1rem; }
 .skill { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--sulfur); border-radius: var(--radius); padding: 1.1rem 1.2rem; }
 .skill h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
 .skill ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.3rem; color: var(--muted); font-size: 0.95rem; }
@@ -570,6 +575,15 @@ const paperHighlights = () => {
     <div class="papers">${feat.map(card).join("")}<div class="papers-pair">${rest.map(card).join("")}</div></div></div>`;
 };
 
+const ICONS = {
+  scholar: '<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#4285F4"/><path d="M16 7 5 14.5h22z" fill="#fff"/><circle cx="16" cy="19.5" r="5.5" fill="#fff"/></svg>',
+  orcid: '<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#A6CE39"/><rect x="9" y="12.5" width="2.6" height="11" fill="#fff"/><circle cx="10.3" cy="9.2" r="1.6" fill="#fff"/><path d="M14.5 12.5h4.2c3.6 0 5.8 2.3 5.8 5.5s-2.2 5.5-5.8 5.5h-4.2zm2.6 2.3v6.4h1.5c2.2 0 3.3-1.4 3.3-3.2s-1.1-3.2-3.3-3.2z" fill="#fff"/></svg>'
+};
+const linkIcon = l => {
+  const k = /scholar\.google/.test(l.link) ? "scholar" : /orcid\.org/.test(l.link) ? "orcid" : "";
+  return k ? `<a class="icon-link" href="${esc(l.link)}" title="${esc(l.label)}" aria-label="${esc(l.label)}">${ICONS[k]}</a>` : `<a href="${esc(l.link)}">${l.label}</a>`;
+};
+
 const pages = {
   home: () => `
     <div class="intro">
@@ -616,13 +630,13 @@ const pages = {
   team: () => {
     const pi = SITE.pi;
     return `
-    <div class="page-head"><h1 style="font-size:var(--step-3)">The people in the lab</h1></div>
+    <div class="page-head"><h1 style="font-size:var(--step-3)">Current group</h1></div>
     ${SITE.lab.group_photo ? `<figure class="figure"><img src="${esc(SITE.lab.group_photo)}" alt="The Iyer Lab group">${SITE.lab.group_photo_caption ? `<figcaption>${SITE.lab.group_photo_caption}</figcaption>` : ""}</figure>` : ""}
     <div class="pi">${avatar(pi)}
       <div class="bio"><div><p class="eyebrow">Principal investigator</p><h2 style="font-size:var(--step-2);margin-top:0.4rem">${pi.name}</h2><p style="color:var(--muted)">${pi.title}</p></div>
         ${paras(pi.bio)}
         <div class="chips">${(pi.interests || []).map(i => `<span class="chip">${i}</span>`).join("")}</div>
-        <p>${esc(SITE.lab.email)}${copyBtn(SITE.lab.email)}${(pi.links || []).map(l => ` · <a href="${esc(l.link)}">${l.label}</a>`).join("")}</p>
+        <p class="pi-contact"><span>${esc(SITE.lab.email)}${copyBtn(SITE.lab.email)}</span>${(pi.links || []).map(linkIcon).join("")}</p>
         ${(pi.career || []).length ? `<div><p class="eyebrow" style="margin-bottom:0.5rem">Previous positions and education</p><ul class="plain timeline">${pi.career.map(c => `<li><span class="mono">${c.years}</span><span><b>${c.role}</b>, ${c.place}${c.with ? `, with ${c.with_link ? `<a href="${esc(c.with_link)}">${c.with}</a>` : c.with}` : ""}</span></li>`).join("")}</ul></div>` : ""}
         ${(pi.awards || []).length + (pi.teaching || []).length ? `<details class="more"><summary><span>Awards and teaching</span><span class="chev" aria-hidden="true">▾</span></summary><div class="more-body">
         ${(pi.awards || []).length ? `<div><p class="eyebrow" style="margin-bottom:0.5rem">Awards and honours</p><ul class="plain timeline">${pi.awards.map(a => `<li style="grid-template-columns:minmax(0,1fr)"><span>${a}</span></li>`).join("")}</ul></div>` : ""}
@@ -637,7 +651,7 @@ const pages = {
       const ug = all.filter(p => p.group === "Undergraduate researchers"), rest = all.filter(p => p.group !== "Undergraduate researchers");
       const shared = ug.length > 1 ? `
       <article class="person shared"><h3 class="shared-title">Undergraduate researchers</h3>${ug.map(p => `<div class="mini">${avatar(p)}<div style="min-width:0"><b>${p.name}</b><div class="role">${p.role}${p.since ? ` · since ${p.since}` : ""}</div><p class="desc">${p.about}</p></div></div>`).join("")}</article>` : ug.map(card).join("");
-      return `<div class="group"><h2 style="font-size:var(--step-2)">Current members</h2><div class="people">${rest.map(card).join("")}${shared}</div></div>`;
+      return `<div class="group"><div class="people">${rest.map(card).join("")}${shared}</div></div>`;
     })()}
     ${(SITE.alumni || []).length ? `<details class="older"><summary><span>Former members</span><span class="count">${SITE.alumni.length} ${SITE.alumni.length === 1 ? "person" : "people"}</span><span class="chev" aria-hidden="true">▾</span></summary>
       <ul class="plain alumni">${SITE.alumni.map(a => `<li><div><b>${a.name}</b><br><span>${a.role}</span></div><div>${a.topic || ""}</div></li>`).join("")}</ul></details>` : ""}
