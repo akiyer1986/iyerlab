@@ -667,8 +667,7 @@ const pages = {
     ${contact()}`,
 
   links: () => `
-    <div class="page-head"><h1 style="font-size:var(--step-3)">Useful links</h1><p>Tools, databases and references for solid-state and materials chemistry, collected for students in the lab and anyone else who finds them useful.</p></div>
-    <nav class="jump" aria-label="Sections">${groupBy(SITE.links, "group").map((g, i) => `<a href="#links" data-jump="lg${i}">${g.key}</a>`).join("")}</nav>
+    <div class="page-head"><h1 style="font-size:var(--step-3)">Useful links</h1></div>
     <div class="links">${groupBy(SITE.links, "group").map((g, i) => `<div id="lg${i}"><h3 class="eyebrow">${g.key}</h3><ul class="plain">${g.items.map(l =>
       `<li><a href="${esc(l.link)}">${l.name}</a>${l.note ? `<small>${l.note}</small>` : ""}</li>`).join("")}</ul></div>`).join("")}</div>`
 };
