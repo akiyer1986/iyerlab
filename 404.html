@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Iyer Lab</title>
+<meta name="robots" content="noindex">
+<script>
+/* Old Google Sites links (for example /team or /useful-links) land here; send them to the matching page. */
+(function () {
+  var p = location.pathname.toLowerCase(), map = [["useful", "links"], ["resource", "links"], ["link", "links"], ["opening", "openings"], ["join", "openings"], ["position", "openings"], ["publication", "publications"], ["paper", "publications"], ["news", "news"], ["research", "research"], ["team", "team"], ["people", "team"], ["member", "team"]];
+  for (var i = 0; i < map.length; i++) if (p.indexOf(map[i][0]) !== -1) { location.replace("/#" + map[i][1]); return; }
+  location.replace("/");
+})();
+</script>
+</head><body><p>Page not found. Go to <a href="/">www.iyerlab.ca</a>.</p></body></html>
