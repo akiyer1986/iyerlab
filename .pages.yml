@@ -1,0 +1,261 @@
+# Pages CMS editor setup for the Iyer Lab website.
+# Sign in at https://app.pagescms.org with GitHub and open this repository.
+media:
+  input: images
+  output: images
+
+content:
+  - name: people
+    label: Group members
+    type: file
+    path: content/people.json
+    format: json
+    list: true
+    fields:
+      - { name: name, label: Name, type: string, required: true }
+      - name: group
+        label: Section on the Team page
+        type: select
+        options:
+          values: [Postdoctoral scholars, Graduate students, Undergraduate researchers, Staff, Visitors]
+      - { name: role, label: "Role (e.g. Ph.D. student)", type: string }
+      - { name: since, label: "In the group since (e.g. Fall 2026)", type: string }
+      - { name: photo, label: Photo, type: image }
+      - { name: about, label: Research and background, type: text }
+      - { name: website, label: "Personal website (optional)", type: string }
+      - { name: orcid, label: "ORCID iD (optional, e.g. 0000-0002-8660-2859)", type: string }
+      - { name: outside_lab, label: Outside the lab, type: string }
+      - { name: email, label: Email, type: string }
+
+  - name: news
+    label: News
+    type: file
+    path: content/news.json
+    format: json
+    list: true
+    fields:
+      - { name: year, label: Year, type: string, required: true }
+      - { name: when, label: "When (e.g. Fall 2026, 14 Jun 2024)", type: string }
+      - { name: text, label: What happened, type: text, required: true }
+      - { name: photo, label: Photo, type: image }
+      - { name: more_photos, label: More photos, type: image, list: true }
+      - { name: hide_on_home, label: "Leave out of the rolling news on the home page", type: boolean }
+
+  - name: media
+    label: In the media (talks, podcasts, features)
+    type: file
+    path: content/media.json
+    format: json
+    list: true
+    fields:
+      - { name: year, label: Year, type: string }
+      - { name: title, label: Title, type: string, required: true }
+      - name: kind
+        label: Type
+        type: select
+        options:
+          values: [Podcast, Video, Feature, Interview, Talk, Award]
+      - { name: outlet, label: "Where (e.g. UM Today)", type: string }
+      - { name: on_home, label: "Show in the rolling news on the home page", type: boolean }
+      - { name: link, label: Link, type: string }
+      - { name: photo, label: Photo, type: image }
+
+  - name: publications
+    label: Publications
+    type: file
+    path: content/publications.json
+    format: json
+    list: true
+    fields:
+      - { name: number, label: Number, type: number }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: title, label: Title, type: string }
+      - { name: authors, label: Authors, type: string }
+      - { name: journal, label: Journal, type: string }
+      - { name: details, label: "Volume, issue, pages", type: string }
+      - { name: lab_paper, label: From the Iyer Lab (highlight it), type: boolean }
+      - { name: at_umanitoba, label: Published at the University of Manitoba, type: boolean }
+      - { name: link, label: "Link (DOI)", type: string }
+
+  - name: pi
+    label: About the PI
+    type: file
+    path: content/pi.json
+    format: json
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: photo, label: Photo, type: image }
+      - { name: title, label: Position, type: string }
+      - { name: bio, label: "Biography (optional; leave blank to hide)", type: text }
+      - { name: interests, label: Research interests, type: string, list: true }
+      - { name: awards, label: Awards and honours, type: string, list: true }
+      - { name: citations, label: "Citation note (e.g. 873 citations on Google Scholar)", type: string }
+      - name: career
+        label: "Previous positions and education (your current role is the title above)"
+        type: object
+        list: true
+        fields:
+          - { name: years, label: Years, type: string }
+          - { name: role, label: Position or degree, type: string }
+          - { name: place, label: Institution, type: string }
+          - { name: with, label: "Supervisor (optional)", type: string }
+          - { name: with_link, label: Supervisor website, type: string }
+      - name: teaching
+        label: Teaching
+        type: object
+        list: true
+        fields:
+          - { name: course, label: Course code, type: string }
+          - { name: name, label: Course name, type: string }
+      - name: links
+        label: Profile links (Google Scholar, LinkedIn, ...)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: link, label: Link, type: string }
+
+  - name: lab
+    label: Lab details, research and openings
+    type: file
+    path: content/lab.json
+    format: json
+    fields:
+      - { name: name, label: Lab name, type: string }
+      - { name: subtitle, label: "Home page subtitle (under the lab name)", type: string }
+      - { name: tagline, label: Home page introduction, type: text }
+      - { name: welcome, label: Home page welcome paragraph, type: text }
+      - { name: show_cycle, label: "Show the cartoon (synthesis, new materials, properties) on the home page", type: boolean }
+      - name: showcase
+        label: "Home page picture row (shown when the cartoon is turned off)"
+        type: object
+        list: true
+        fields:
+          - { name: photo, label: Picture, type: image }
+          - { name: label, label: Title, type: string }
+          - { name: text, label: One-line description, type: string }
+      - { name: hero_photo, label: "Home page picture (leave empty to show the rotating lattice)", type: image }
+      - { name: hero_caption, label: Home page picture caption, type: string }
+      - { name: group_photo, label: Group photo on the Team page, type: image }
+      - { name: group_photo_caption, label: Group photo caption, type: string }
+      - name: gallery
+        label: Lab life photos (Team page)
+        type: object
+        list: true
+        fields:
+          - { name: photo, label: Photo, type: image }
+          - { name: caption, label: Caption, type: string }
+      - { name: email, label: Contact email, type: string }
+      - { name: phone, label: Phone, type: string }
+      - { name: address, label: Address, type: text }
+      - { name: goatcounter, label: "Visitor counter code (the name before .goatcounter.com, e.g. iyerlab)", type: string }
+      - { name: research_intro, label: Research page introduction, type: text }
+      - name: areas
+        label: Research projects
+        type: object
+        list: true
+        fields:
+          - { name: tag, label: Short label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Description, type: text }
+          - { name: photo, label: Photo, type: image }
+      - name: methods
+        label: Methods
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Description, type: text }
+      - name: equipment
+        label: Equipment (Research page)
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Description, type: text }
+          - { name: photo, label: Photo, type: image }
+          - { name: video, label: "Video (optional, .mp4; the photo is shown before it plays)", type: file }
+      - name: funders
+        label: Funding (shown on the home page)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Funder, type: string }
+          - { name: detail, label: "Grant or award (e.g. Discovery Grant, 2025)", type: string }
+          - { name: logo, label: Logo, type: image }
+          - { name: link, label: Website, type: string }
+      - name: highlights
+        label: Key research papers (home page and bottom of Research page)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Short label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Description, type: text }
+          - { name: image, label: "Figure (optional; shown in Key research papers on the home page)", type: image }
+          - { name: citation, label: "Paper (e.g. Mishra et al., Chemistry of Materials 2026)", type: string }
+          - { name: role, label: "Your role (e.g. Corresponding author)", type: string }
+          - { name: featured, label: Feature this paper (large card), type: boolean }
+          - { name: link, label: Paper link, type: string }
+      - { name: vision, label: Vision (Research page), type: text }
+      - name: collaborators
+        label: Collaborators
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: affiliation, label: Department and institution, type: string }
+          - { name: area, label: Area, type: string }
+          - name: group
+            label: Group
+            type: select
+            options:
+              values: [In Manitoba, International]
+      - { name: openings_intro, label: Join us page introduction, type: text }
+      - name: openings
+        label: Openings
+        type: object
+        list: true
+        fields:
+          - { name: who, label: For, type: string }
+          - { name: text, label: Description, type: text }
+          - { name: steps, label: Ways in or steps, type: string, list: true }
+          - { name: send, label: What to send, type: string }
+      - name: skills
+        label: "Join us: what you'll learn"
+        type: object
+        list: true
+        fields:
+          - { name: group, label: Area, type: string }
+          - { name: items, label: Skills, type: string, list: true }
+      - name: week
+        label: "Join us: a week in the lab"
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Description, type: text }
+          - { name: photo, label: Photo, type: image }
+
+  - name: alumni
+    label: Former members
+    type: file
+    path: content/alumni.json
+    format: json
+    list: true
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: role, label: "Role and years", type: string }
+      - { name: topic, label: Project, type: string }
+
+  - name: links
+    label: Useful links
+    type: file
+    path: content/links.json
+    format: json
+    list: true
+    fields:
+      - { name: group, label: Section, type: string }
+      - { name: name, label: Name, type: string }
+      - { name: link, label: Link, type: string }
+      - { name: note, label: Note, type: string }
