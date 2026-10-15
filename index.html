@@ -184,8 +184,13 @@ section.page { display: grid; gap: 3rem; }
 .avatar img { width: 100%; height: 100%; object-fit: cover; }
 .group { display: grid; gap: 1.25rem; }
 .people { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: 1.25rem; }
-.person { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; padding: 1.1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); align-content: start; }
+.person { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0.6rem 1rem; padding: 1.1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); align-content: start; }
 .person .avatar { font-size: 1.1rem; }
+.person .p-head { align-self: center; min-width: 0; }
+.person .p-body { grid-column: 1 / -1; min-width: 0; }
+.person .p-links { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.45rem; }
+.person .p-links .site-link { margin-top: 0; }
+.icon-link.small { width: 1.6rem; height: 1.6rem; }
 .person.shared { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
 .person.shared .shared-title { font-size: 1.1rem; }
 .person.shared .mini { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0.9rem; align-items: start; }
@@ -647,8 +652,8 @@ const pages = {
     ${(() => {
       const all = groupBy(SITE.people, "group", GROUP_ORDER).flatMap(g => g.items);
       const card = p => `
-      <article class="person">${avatar(p)}<div style="min-width:0"><h3>${p.name}</h3><div class="role">${p.role}</div>${p.since ? `<div class="since">Since ${p.since}</div>` : ""}
-        <p class="desc">${p.about}</p>${p.outside_lab ? `<p class="fun">${p.outside_lab}</p>` : ""}${p.email ? `<div class="email">${esc(p.email)}</div>` : ""}${p.website ? `<a class="site-link" href="${esc(p.website)}">Personal website →</a>` : ""}${p.orcid ? `<a class="site-link orcid" href="https://orcid.org/${esc(p.orcid)}">ORCID ${esc(p.orcid)}</a>` : ""}</div></article>`;
+      <article class="person">${avatar(p)}<div class="p-head"><h3>${p.name}</h3><div class="role">${p.role}</div>${p.since ? `<div class="since">Since ${p.since}</div>` : ""}</div>
+        <div class="p-body"><p class="desc">${p.about}</p>${p.outside_lab ? `<p class="fun">${p.outside_lab}</p>` : ""}${p.email ? `<div class="email">${esc(p.email)}</div>` : ""}${p.website || p.orcid ? `<div class="p-links">${p.website ? `<a class="site-link" href="${esc(p.website)}">Personal website →</a>` : ""}${p.orcid ? `<a class="icon-link small" href="https://orcid.org/${esc(p.orcid)}" title="ORCID ${esc(p.orcid)}" aria-label="ORCID ${esc(p.orcid)}">${ICONS.orcid}</a>` : ""}</div>` : ""}</div></article>`;
       const ug = all.filter(p => p.group === "Undergraduate researchers"), rest = all.filter(p => p.group !== "Undergraduate researchers");
       const shared = ug.length > 1 ? `
       <article class="person shared"><h3 class="shared-title">Undergraduate researchers</h3>${ug.map(p => `<div class="mini">${avatar(p)}<div style="min-width:0"><b>${p.name}</b><div class="role">${p.role}${p.since ? ` · since ${p.since}` : ""}</div><p class="desc">${p.about}</p></div></div>`).join("")}</article>` : ug.map(card).join("");
