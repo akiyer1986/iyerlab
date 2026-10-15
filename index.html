@@ -324,9 +324,10 @@ details.older > .pub-year + .pub-year, details.older > .pub-year { margin-top: 1
 .home-pair h2 { font-size: var(--step-1); }
 .papers-tk .ticker-head { align-items: center; }
 .papers-tk .pdesc { font-size: 0.9rem; color: var(--muted); }
-.funders-mini { display: grid; gap: 0.9rem; align-content: start; padding: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); align-self: stretch; }
-.funders-mini .logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
-.funders-mini .logos > * { display: flex; align-items: center; justify-content: center; height: 6.5rem; padding: 0.8rem 1rem; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-sizing: border-box; }
+.funders-mini { display: grid; gap: 0.9rem; grid-template-rows: auto 1fr; padding: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); align-self: stretch; }
+.funders-mini .logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: minmax(6.5rem, 1fr); gap: 0.8rem; }
+.funders-mini .logos > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+.funders-mini .logos > * { display: flex; align-items: center; justify-content: center; padding: 0.8rem 1rem; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-sizing: border-box; }
 .funders-mini .logos > a:hover { border-color: var(--sulfur); }
 .funders-mini img { display: block; max-height: 4.4rem; max-width: 100%; width: auto; height: auto; object-fit: contain; }
 .funders-mini span { font-size: 0.85rem; color: #1f2433; }
