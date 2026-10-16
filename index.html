@@ -819,7 +819,15 @@ function route() {
 
 /* Visitor counter (GoatCounter). Counts only on the live site, once a site code is set in lab.json. */
 let firstVisit = true;
+/* Opening the site once with ?nocount on a device stops that browser being counted; ?count turns counting back on. */
+const optOut = (() => { try {
+  const q = new URLSearchParams(location.search);
+  if (q.has("nocount")) { localStorage.setItem("iyerlab-nocount", "1"); alert("Your visits from this browser will no longer be counted."); }
+  if (q.has("count")) { localStorage.removeItem("iyerlab-nocount"); alert("Your visits from this browser will be counted again."); }
+  return localStorage.getItem("iyerlab-nocount") === "1";
+} catch (e) { return false; } })();
 function countVisit(page) {
+  if (optOut) return;
   const code = (SITE.lab.goatcounter || "").trim();
   if (!code || !/^[a-z0-9-]+$/.test(code) || /^(localhost|127\.|$)|claude|usercontent/.test(location.hostname)) return;
   const q = new URLSearchParams({ p: "/" + (page === "home" ? "" : page), t: document.title, r: firstVisit ? document.referrer : "", s: `${screen.width},${screen.height},${devicePixelRatio || 1}`, rnd: Math.random().toString(36).slice(2) });
