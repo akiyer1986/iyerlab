@@ -7,16 +7,15 @@
   },
   {
     "year": "2026",
-    "when": "Summer 2026",
-    "text": "Abishek presented a poster at the Gordon Research Conference: “Rationalizing the Synthesis of Noncentrosymmetric Chalcoarsenates: A<sub>2x</sub>Sr<sub>3−x</sub>(AsS<sub>4</sub>)<sub>n</sub> (A = Na, K)”.",
-    "photo": "images/news-gordon-2026.jpg",
-    "hide_on_home": true
+    "when": "IUCr 2026, Calgary",
+    "text": "Vidyanshu presented his poster “Designing noncentrosymmetric chalcoarsenates via arsenic mixed valence for macroscopic polarity” at the 27th IUCr Congress.",
+    "photo": "images/news-iucr-2026-vidyanshu.jpg"
   },
   {
     "year": "2026",
-    "when": "CSC 2026, Toronto",
-    "text": "Dinner with solid-state chemistry groups from across Canada.",
-    "photo": "images/news-csc-2026-dinner.jpg",
+    "when": "Summer 2026",
+    "text": "Abishek presented a poster at the Gordon Research Conference: “Rationalizing the Synthesis of Noncentrosymmetric Chalcoarsenates: A<sub>2x</sub>Sr<sub>3−x</sub>(AsS<sub>4</sub>)<sub>n</sub> (A = Na, K)”.",
+    "photo": "images/news-gordon-2026.jpg",
     "hide_on_home": true
   },
   {
@@ -27,9 +26,10 @@
   },
   {
     "year": "2026",
-    "when": "Summer 2026",
-    "text": "Our first paper as a group appeared in <em>Chemistry of Materials</em>, on noncentrosymmetric Sr<sub>3</sub>As<sub>2</sub>S<sub>7</sub> and Sr<sub>3</sub>As<sub>2</sub>Se<sub>2.5</sub>S<sub>4.5</sub>, in a special issue honouring Mercouri Kanatzidis.",
-    "photo": "images/news-first-paper-chem-mater.png"
+    "when": "CSC 2026, Toronto",
+    "text": "Dinner with solid-state chemistry groups from across Canada.",
+    "photo": "images/news-csc-2026-dinner.jpg",
+    "hide_on_home": true
   },
   {
     "year": "2026",
@@ -40,9 +40,15 @@
   },
   {
     "year": "2026",
-    "when": "Summer 2026",
+    "when": "Winter 2026",
     "text": "Taiwo Ogundimu presented her CHEM 4710 project on using machine learning to identify ternary chalcogenides for photovoltaics. Thank you, Taiwo, for your time in the group!",
     "photo": "images/news-taiwo-presentation.jpg"
+  },
+  {
+    "year": "2026",
+    "when": "Winter 2026",
+    "text": "Our first paper as a group appeared in <em>Chemistry of Materials</em>, on noncentrosymmetric Sr<sub>3</sub>As<sub>2</sub>S<sub>7</sub> and Sr<sub>3</sub>As<sub>2</sub>Se<sub>2.5</sub>S<sub>4.5</sub>, in a special issue honouring Mercouri Kanatzidis.",
+    "photo": "images/news-first-paper-chem-mater.png"
   },
   {
     "year": "2025",
