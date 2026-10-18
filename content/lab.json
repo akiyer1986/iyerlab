@@ -64,7 +64,7 @@
   "methods": [
     {
       "title": "High-temperature synthesis",
-      "text": "Elements and simple compounds are sealed in evacuated silica tubes and heated to as high as about 1100 °C, so atoms can diffuse and react in the solid state to form new compounds. Chemical vapor transport works differently: a transport agent such as iodine carries material as a gas from the hot end of the tube to the cooler end, where it deposits as high-quality single crystals."
+      "text": "We focus on metal chalcogenides (sulfides, selenides and tellurides) and mixed-anion materials that combine more than one type of anion. The starting elements are sealed in evacuated silica tubes and heated in furnaces to as high as about 1100 °C, where they react to form new compounds. For two-dimensional layered materials we use chemical vapor transport: a transport agent such as iodine carries material as a gas along a temperature gradient, and it deposits at the other end of the tube as large, high-quality single crystals."
     },
     {
       "title": "Flux synthesis",
