@@ -325,6 +325,11 @@ details.older[open] > summary .chev { transform: rotate(180deg); }
 details.older[open] > summary { margin-bottom: 1.5rem; }
 details.older > .pub-year + .pub-year, details.older > .pub-year { margin-top: 1.5rem; }
 @media (prefers-reduced-motion: reduce) { details.older > summary .chev { transition: none; } }
+details.news-year { border-top: 0; }
+.news-older { display: grid; gap: 0.8rem; }
+details.news-year > summary { margin-top: 0; }
+details.news-year > summary .mono { font-size: var(--step-2); color: var(--sulfur-ink); }
+details.news-year > summary .count { color: var(--muted); font: 400 0.9rem/1 var(--font-body, inherit); }
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1.25rem; }
 .gallery { align-items: start; }
 .gallery img { width: 100%; height: auto; aspect-ratio: 1.85; object-fit: cover; object-position: center bottom; }
@@ -697,7 +702,12 @@ const pages = {
   news: () => `
     <div class="page-head"><h1 style="font-size:var(--step-3)">Lab news</h1></div>
     ${mediaBlock()}
-    ${groupBy(SITE.news, "year").sort((a, b) => b.key - a.key).map(y => `<div class="split"><div><h2 class="mono" style="font-size:var(--step-2);color:var(--sulfur-ink)">${y.key}</h2></div>${newsItems(y.items)}</div>`).join("")}`,
+    ${(() => {
+      const years = groupBy(SITE.news, "year").sort((a, b) => b.key - a.key);
+      const [latest, ...older] = years;
+      return (latest ? `<div class="split"><div><h2 class="mono" style="font-size:var(--step-2);color:var(--sulfur-ink)">${latest.key}</h2></div>${newsItems(latest.items)}</div>` : "")
+        + (older.length ? `<div class="news-older">${older.map(y => `<details class="older news-year"><summary><span class="mono">${y.key}</span><span class="count">${y.items.length} ${y.items.length === 1 ? "story" : "stories"}</span><span class="chev" aria-hidden="true">▾</span></summary>${newsItems(y.items)}</details>`).join("")}</div>` : "");
+    })()}`,
 
   openings: () => `
     <div class="page-head"><h1 style="font-size:var(--step-3)">Work with us on new materials</h1><p>${SITE.lab.openings_intro}</p></div>
