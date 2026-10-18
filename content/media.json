@@ -1,25 +1,5 @@
 [
   {
-    "title": "Where do scientists get their ideas from?",
-    "kind": "Podcast",
-    "outlet": "Science Lens podcast, UManitoba Faculty of Science",
-    "on_home": true,
-    "link": "https://youtu.be/ZiNusVEG4TQ",
-    "photo": "images/media-podcast.jpg",
-    "date": "September 2025",
-    "year": "2025"
-  },
-  {
-    "year": "2026",
-    "title": "AI-driven treatment of water: remediation solutions for Manitoba",
-    "kind": "Video",
-    "outlet": "UManitoba Faculty of Science YouTube channel",
-    "on_home": true,
-    "link": "https://youtu.be/wtuqX_Y5DDM",
-    "photo": "images/media-ai-water-video.jpg",
-    "date": "March 2026"
-  },
-  {
     "year": "2026",
     "title": "Cleaning up toxic metals from mine and industrial runoff",
     "kind": "Feature",
@@ -38,5 +18,25 @@
     "link": "https://umtoday.ca/stories/shaping-future-science",
     "photo": "images/media-asian-heritage-month-2026.jpg",
     "date": "May 2026"
+  },
+  {
+    "year": "2026",
+    "title": "AI-driven treatment of water: remediation solutions for Manitoba",
+    "kind": "Video",
+    "outlet": "UManitoba Faculty of Science YouTube channel",
+    "on_home": true,
+    "link": "https://youtu.be/wtuqX_Y5DDM",
+    "photo": "images/media-ai-water-video.jpg",
+    "date": "March 2026"
+  },
+  {
+    "title": "Where do scientists get their ideas from?",
+    "kind": "Podcast",
+    "outlet": "Science Lens podcast, UManitoba Faculty of Science",
+    "on_home": true,
+    "link": "https://youtu.be/ZiNusVEG4TQ",
+    "photo": "images/media-podcast.jpg",
+    "date": "September 2025",
+    "year": "2025"
   }
 ]

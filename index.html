@@ -590,9 +590,12 @@ const funders = () => (SITE.lab.funders || []).length ? `
     <div class="split"><div><h2>Supported by</h2></div>
       <div class="funders">${SITE.lab.funders.map(f => `<div class="funder">${f.logo ? `<img src="${esc(f.logo)}" alt="${esc(f.name)} logo" loading="lazy">` : ""}<b>${f.link ? `<a href="${esc(f.link)}">${f.name}</a>` : f.name}</b><span>${f.detail || ""}</span></div>`).join("")}</div></div>` : "";
 
+/* Newest first, from "Month YYYY" (or just the year) so new entries land in the right place wherever they are added. */
+const mediaWhen = m => { const t = Date.parse(`1 ${m.date || ""}`); return isNaN(t) ? Date.parse(`1 January ${m.year || 1900}`) : t; };
+const mediaByDate = () => [...(SITE.media || [])].sort((a, b) => mediaWhen(b) - mediaWhen(a));
 const mediaBlock = () => (SITE.media || []).length ? `
     <div class="split"><div><h2>Talks, features and interviews</h2></div>
-      <div class="media-list">${SITE.media.map(m => `<div class="media-item">${m.photo ? (m.link ? `<a href="${esc(m.link)}"><img src="${esc(m.photo)}" alt="" loading="lazy"></a>` : `<img src="${esc(m.photo)}" alt="" loading="lazy">`) : ""}<span class="eyebrow kind">${m.kind}${m.date ? ` · ${m.date}` : m.year ? ` · ${m.year}` : ""}</span><h3 style="font-size:1.05rem">${m.link ? `<a href="${esc(m.link)}">${m.title}</a>` : m.title}</h3><p>${m.outlet}</p></div>`).join("")}</div></div>` : "";
+      <div class="media-list">${mediaByDate().map(m => `<div class="media-item">${m.photo ? (m.link ? `<a href="${esc(m.link)}"><img src="${esc(m.photo)}" alt="" loading="lazy"></a>` : `<img src="${esc(m.photo)}" alt="" loading="lazy">`) : ""}<span class="eyebrow kind">${m.kind}${m.date ? ` · ${m.date}` : m.year ? ` · ${m.year}` : ""}</span><h3 style="font-size:1.05rem">${m.link ? `<a href="${esc(m.link)}">${m.title}</a>` : m.title}</h3><p>${m.outlet}</p></div>`).join("")}</div></div>` : "";
 
 const paperHighlights = () => {
   const hs = SITE.lab.highlights || [];
