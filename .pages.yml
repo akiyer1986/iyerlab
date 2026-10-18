@@ -205,7 +205,6 @@ content:
         fields:
           - { name: name, label: Name, type: string }
           - { name: affiliation, label: Department and institution, type: string }
-          - { name: area, label: Area, type: string }
           - name: group
             label: Group
             type: select

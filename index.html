@@ -654,7 +654,7 @@ const pages = {
     ${SITE.lab.vision ? `<div class="split"><div><h2>Our vision</h2></div><p class="vision">${SITE.lab.vision}</p></div>` : ""}
     ${fundersRow()}
     ${(SITE.lab.collaborators || []).length ? `<div class="split"><div><h2>Who we work with</h2></div>
-      <div class="links">${groupBy(SITE.lab.collaborators, "group", ["In Manitoba", "International"]).map(g => `<div><h3 class="eyebrow">${g.key}</h3><ul class="plain">${g.items.map(c => `<li><b>${c.name}</b><small>${c.affiliation}${c.area ? ` · ${c.area}` : ""}</small></li>`).join("")}</ul></div>`).join("")}</div></div>` : ""}
+      <div class="links">${groupBy(SITE.lab.collaborators, "group", ["In Manitoba", "International"]).map(g => `<div><h3 class="eyebrow">${g.key}</h3><ul class="plain">${g.items.map(c => `<li><b>${c.name}</b><small>${c.affiliation}</small></li>`).join("")}</ul></div>`).join("")}</div></div>` : ""}
     ${paperHighlights()}`,
 
   team: () => {

@@ -278,43 +278,36 @@
     {
       "name": "Joshua Walsh",
       "affiliation": "Chemistry, University of Manitoba",
-      "area": "Crystallography",
       "group": "In Manitoba"
     },
     {
       "name": "Mario Bieringer",
       "affiliation": "Chemistry, University of Manitoba",
-      "area": "Computational chemistry",
       "group": "In Manitoba"
     },
     {
       "name": "Chris Wiebe",
       "affiliation": "Chemistry, University of Winnipeg",
-      "area": "Quantum materials",
       "group": "In Manitoba"
     },
     {
       "name": "Christian Kuss",
       "affiliation": "Chemistry, University of Manitoba",
-      "area": "Electrochemistry and battery materials",
       "group": "In Manitoba"
     },
     {
       "name": "Joon Jang",
       "affiliation": "Sogang University, South Korea",
-      "area": "Nonlinear optics",
       "group": "International"
     },
     {
       "name": "Anastasia Pournara",
       "affiliation": "Aristotle University of Thessaloniki, Greece",
-      "area": "Water remediation",
       "group": "International"
     },
     {
       "name": "Mercouri Kanatzidis",
       "affiliation": "Northwestern University, USA",
-      "area": "Solid-state chemistry",
       "group": "International"
     }
   ],
