@@ -177,6 +177,11 @@ section.page { display: grid; gap: 3rem; }
 .more-photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: 0.6rem; max-width: 32rem; }
 .news-list.compact .more-photos { display: none; }
 .news-item p + p { margin-top: 0.35rem; }
+.news-list:not(.compact) .news-item > div:last-child:has(> img) { display: grid; grid-template-columns: 14rem minmax(0, 1fr); column-gap: 1.25rem; row-gap: 0; align-items: start; align-content: start; }
+.news-list:not(.compact) .news-item > div:last-child > img { grid-column: 1; grid-row: 1 / span 3; margin-top: 0; width: auto; max-width: 100%; max-height: 12rem; height: auto; }
+.news-list:not(.compact) .news-item > div:last-child:has(> img) > :not(img) { grid-column: 2; }
+.news-list:not(.compact) .more-photos { grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); max-width: 26rem; }
+@media (max-width: 600px) { .news-list:not(.compact) .news-item > div:last-child:has(> img) { grid-template-columns: 8rem minmax(0, 1fr); column-gap: 0.9rem; } }
 .news-year { display: grid; gap: 1rem; }
 
 /* Team */
