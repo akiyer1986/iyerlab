@@ -139,7 +139,7 @@ content:
       - { name: group_photo, label: Group photo on the Team page, type: image }
       - { name: group_photo_caption, label: Group photo caption, type: string }
       - name: gallery
-        label: Lab life photos (Team page)
+        label: Past group pictures (Team page)
         type: object
         list: true
         fields:

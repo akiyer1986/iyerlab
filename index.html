@@ -327,7 +327,7 @@ details.older > .pub-year + .pub-year, details.older > .pub-year { margin-top: 1
 @media (prefers-reduced-motion: reduce) { details.older > summary .chev { transition: none; } }
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1.25rem; }
 .gallery { align-items: start; }
-.gallery img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; }
+.gallery img { width: 100%; height: auto; aspect-ratio: 1.85; object-fit: cover; object-position: center bottom; }
 .home-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: stretch; }
 .home-pair > .ticker { align-self: stretch; align-content: start; grid-template-rows: auto 1fr auto; }
 .home-pair h2 { font-size: var(--step-1); }
@@ -685,7 +685,7 @@ const pages = {
     })()}
     ${(SITE.alumni || []).length ? `<details class="older"><summary><span>Former members</span><span class="count">${SITE.alumni.length} ${SITE.alumni.length === 1 ? "person" : "people"}</span><span class="chev" aria-hidden="true">▾</span></summary>
       <ul class="plain alumni">${SITE.alumni.map(a => `<li><div><b>${a.name}</b><br><span>${a.role}</span></div><div>${a.topic || ""}</div></li>`).join("")}</ul></details>` : ""}
-    ${(SITE.lab.gallery || []).length ? `<div class="group"><h2 style="font-size:var(--step-2)">Lab life</h2><div class="gallery">${SITE.lab.gallery.map(g => `<figure class="figure"><img src="${esc(g.photo)}" alt="${esc(g.caption || "")}" loading="lazy">${g.caption ? `<figcaption>${g.caption}</figcaption>` : ""}</figure>`).join("")}</div></div>` : ""}`;
+    ${(SITE.lab.gallery || []).length ? `<div class="group"><h2 style="font-size:var(--step-2)">Past group pictures</h2><div class="gallery">${SITE.lab.gallery.map(g => `<figure class="figure"><img src="${esc(g.photo)}" alt="${esc(g.caption || "")}" loading="lazy">${g.caption ? `<figcaption>${g.caption}</figcaption>` : ""}</figure>`).join("")}</div></div>` : ""}`;
   },
 
   publications: () => `
