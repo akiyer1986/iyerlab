@@ -6,7 +6,7 @@
     "on_home": true,
     "link": "https://youtu.be/ZiNusVEG4TQ",
     "photo": "images/media-podcast.jpg",
-    "date": "Sep 17, 2025",
+    "date": "September 2025",
     "year": "2025"
   },
   {
@@ -17,7 +17,7 @@
     "on_home": true,
     "link": "https://youtu.be/wtuqX_Y5DDM",
     "photo": "images/media-ai-water-video.jpg",
-    "date": "Mar 27, 2026"
+    "date": "March 2026"
   },
   {
     "year": "2026",
@@ -27,7 +27,7 @@
     "on_home": false,
     "link": "https://umtoday.ca/stories/research-manitoba-faculty-science-2025",
     "photo": "images/media-research-manitoba-2025.jpg",
-    "date": "Jun 26, 2026"
+    "date": "June 2026"
   },
   {
     "year": "2026",
@@ -37,6 +37,6 @@
     "on_home": false,
     "link": "https://umtoday.ca/stories/shaping-future-science",
     "photo": "images/media-asian-heritage-month-2026.jpg",
-    "date": "May 27, 2026"
+    "date": "May 2026"
   }
 ]
