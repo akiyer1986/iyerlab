@@ -21,6 +21,17 @@
     "title": "Cleaning up toxic metals from mine and industrial runoff",
     "kind": "Feature",
     "outlet": "UM Today",
-    "on_home": false
+    "on_home": false,
+    "link": "https://umtoday.ca/stories/research-manitoba-faculty-science-2025",
+    "photo": "https://umtoday.ca/sites/default/files/styles/3_2_scale_and_crop_xlarge/public/images/research-manitoba-um-recipients-fos.jpg?h=0838062f&itok=Vnbabsd4"
+  },
+  {
+    "year": "2026",
+    "title": "Shaping the future of science: Asian Heritage Month 2026",
+    "kind": "Feature",
+    "outlet": "UM Today",
+    "on_home": false,
+    "link": "https://umtoday.ca/stories/shaping-future-science",
+    "photo": "https://umtoday.ca/sites/default/files/styles/3_2_scale_and_crop_xlarge/public/images/2026-asian-heritage-month-cover-fos.jpg?h=0838062f&itok=O-MBjmi5"
   }
 ]
