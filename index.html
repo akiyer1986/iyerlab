@@ -592,7 +592,7 @@ const funders = () => (SITE.lab.funders || []).length ? `
 
 const mediaBlock = () => (SITE.media || []).length ? `
     <div class="split"><div><h2>Talks, features and interviews</h2></div>
-      <div class="media-list">${SITE.media.map(m => `<div class="media-item">${m.photo ? (m.link ? `<a href="${esc(m.link)}"><img src="${esc(m.photo)}" alt="" loading="lazy"></a>` : `<img src="${esc(m.photo)}" alt="" loading="lazy">`) : ""}<span class="eyebrow kind">${m.kind}${m.year ? ` · ${m.year}` : ""}</span><h3 style="font-size:1.05rem">${m.link ? `<a href="${esc(m.link)}">${m.title}</a>` : m.title}</h3><p>${m.outlet}</p></div>`).join("")}</div></div>` : "";
+      <div class="media-list">${SITE.media.map(m => `<div class="media-item">${m.photo ? (m.link ? `<a href="${esc(m.link)}"><img src="${esc(m.photo)}" alt="" loading="lazy"></a>` : `<img src="${esc(m.photo)}" alt="" loading="lazy">`) : ""}<span class="eyebrow kind">${m.kind}${m.date ? ` · ${m.date}` : m.year ? ` · ${m.year}` : ""}</span><h3 style="font-size:1.05rem">${m.link ? `<a href="${esc(m.link)}">${m.title}</a>` : m.title}</h3><p>${m.outlet}</p></div>`).join("")}</div></div>` : "";
 
 const paperHighlights = () => {
   const hs = SITE.lab.highlights || [];

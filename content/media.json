@@ -5,16 +5,19 @@
     "outlet": "Science Lens podcast, UManitoba Faculty of Science",
     "on_home": true,
     "link": "https://youtu.be/ZiNusVEG4TQ",
-    "photo": "images/media-podcast.jpg"
+    "photo": "images/media-podcast.jpg",
+    "date": "Sep 17, 2025",
+    "year": "2025"
   },
   {
-    "year": "2025",
+    "year": "2026",
     "title": "AI-driven treatment of water: remediation solutions for Manitoba",
     "kind": "Video",
     "outlet": "UManitoba Faculty of Science YouTube channel",
     "on_home": true,
     "link": "https://youtu.be/wtuqX_Y5DDM",
-    "photo": "images/media-ai-water-video.jpg"
+    "photo": "images/media-ai-water-video.jpg",
+    "date": "Mar 27, 2026"
   },
   {
     "year": "2026",
@@ -23,7 +26,8 @@
     "outlet": "UM Today",
     "on_home": false,
     "link": "https://umtoday.ca/stories/research-manitoba-faculty-science-2025",
-    "photo": "images/media-research-manitoba-2025.jpg"
+    "photo": "images/media-research-manitoba-2025.jpg",
+    "date": "Jun 26, 2026"
   },
   {
     "year": "2026",
@@ -32,6 +36,7 @@
     "outlet": "UM Today",
     "on_home": false,
     "link": "https://umtoday.ca/stories/shaping-future-science",
-    "photo": "images/media-asian-heritage-month-2026.jpg"
+    "photo": "images/media-asian-heritage-month-2026.jpg",
+    "date": "May 27, 2026"
   }
 ]
