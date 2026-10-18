@@ -64,11 +64,11 @@
   "methods": [
     {
       "title": "High-temperature synthesis",
-      "text": "Solid-state reactions, molten fluxes and chemical vapor transport to discover new compounds and grow high-quality single crystals."
+      "text": "Solid-state reactions and chemical vapor transport to discover new compounds and grow high-quality single crystals."
     },
     {
-      "title": "Reactive flux synthesis",
-      "text": "Reactive phosphorus chalcogenide fluxes (P<sub>2</sub>S<sub>5</sub> and P<sub>2</sub>Se<sub>5</sub>) that assemble complex chalcogenide frameworks, cut some syntheses from months to hours and reach structures conventional methods cannot."
+      "title": "Flux synthesis",
+      "text": "We use many different fluxes to reach new phases that are otherwise difficult to obtain: reactive fluxes such as P<sub>2</sub>S<sub>5</sub> and P<sub>2</sub>Se<sub>5</sub> that build complex chalcogenide frameworks, and non-reactive halide and polychalcogenide fluxes that let new crystals grow at lower temperatures."
     },
     {
       "title": "AI-guided discovery",
