@@ -23,7 +23,7 @@
     "outlet": "UM Today",
     "on_home": false,
     "link": "https://umtoday.ca/stories/research-manitoba-faculty-science-2025",
-    "photo": "https://umtoday.ca/sites/default/files/styles/3_2_scale_and_crop_xlarge/public/images/research-manitoba-um-recipients-fos.jpg?h=0838062f&itok=Vnbabsd4"
+    "photo": "images/media-research-manitoba-2025.jpg"
   },
   {
     "year": "2026",
@@ -32,6 +32,6 @@
     "outlet": "UM Today",
     "on_home": false,
     "link": "https://umtoday.ca/stories/shaping-future-science",
-    "photo": "https://umtoday.ca/sites/default/files/styles/3_2_scale_and_crop_xlarge/public/images/2026-asian-heritage-month-cover-fos.jpg?h=0838062f&itok=O-MBjmi5"
+    "photo": "images/media-asian-heritage-month-2026.jpg"
   }
 ]
