@@ -1,8 +1,895 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<title>Iyer Lab</title>
-<meta name="robots" content="noindex">
-<link rel="canonical" href="https://www.iyerlab.ca/">
-<meta http-equiv="refresh" content="0; url=/#team">
-<script>location.replace("/#team");</script>
-</head><body><p>This page has moved to <a href="/#team">www.iyerlab.ca/#team</a>.</p></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<base href="/">
+<title>Team · Iyer Lab</title>
+<link rel="canonical" href="https://www.iyerlab.ca/team/">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Meet Abishek Iyer and the students and researchers of the Iyer Lab, Department of Chemistry, University of Manitoba.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Iyer Lab · Functional Inorganic Materials">
+<meta property="og:description" content="New chalcogenide crystals for infrared optics, water remediation and quantum materials. Department of Chemistry, University of Manitoba.">
+<meta property="og:url" content="https://www.iyerlab.ca/team/">
+<meta property="og:image" content="https://www.iyerlab.ca/images/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+/* Layout: sticky wordmark bar, one content column (~72rem) per page; home pairs a crystal-lattice canvas with the lab's thesis. */
+:root {
+  --bg: #ffffff;
+  --surface: #f7f8fa;
+  --ink: #151a28;
+  --muted: #586174;
+  --line: #dde1e8;
+  --sulfur: #d9a406;        /* marks, rules, lattice atoms */
+  --sulfur-ink: #835f00;    /* sulfur used as text on light */
+  --selenium: #b23a2e;      /* second atom colour, tags */
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --step-0: 1.0625rem; --step-1: 1.25rem; --step-2: 1.6rem; --step-3: 2.2rem; --step-4: clamp(2.4rem, 5.5vw, 3.8rem);
+  --radius: 6px;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+}
+:root[data-theme="dark"] {
+  --bg: #0d1120; --surface: #151a2b; --ink: #e7e9f0; --muted: #9ba4b7; --line: #283049;
+  --sulfur: #f0c232; --sulfur-ink: #f0c232; --selenium: #e46a5c; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 var(--step-0)/1.6 var(--font-body); }
+a { color: var(--sulfur-ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--sulfur); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.15; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-1); }
+p { margin: 0; }
+.wrap { max-width: 72rem; margin: 0 auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.mono { font-family: var(--font-mono); font-size: 0.82em; }
+.eyebrow { font: 500 0.78rem/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+/* Header */
+header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.8rem; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); }
+.brand svg { flex: none; }
+.brand b { font: 700 1.15rem/1 var(--font-display); }
+.brand span { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+nav.main { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+nav.main a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 0.35rem 0.6rem; border-radius: var(--radius); }
+nav.main a:hover { color: var(--ink); }
+nav.main a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--sulfur); border-radius: 0; }
+
+main { padding-block: 2.5rem 4rem; }
+section.page { display: grid; gap: 3rem; }
+.page-head { display: grid; gap: 0.75rem; max-width: 62rem; }
+.page-head p { color: var(--muted); font-size: var(--step-1); line-height: 1.5; }
+
+/* Home hero */
+.intro { text-align: center; display: grid; gap: 0.6rem; justify-items: center; }
+.intro h1 { font-size: var(--step-4); }
+.intro .subhead { color: var(--muted); font-size: var(--step-1); }
+.banner { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+.banner img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: center 12%; display: block; }
+.banner figcaption { padding: 0.55rem 0.9rem; color: var(--muted); font: 400 0.78rem/1.4 var(--font-mono); border-top: 1px solid var(--line); }
+.cycle { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.8rem; max-width: 52rem; margin-inline: auto; }
+.cycle-step { margin: 0; position: relative; display: grid; gap: 0.7rem; align-content: start; }
+.cycle-step .art { position: relative; border-radius: 14px; border: 2px solid #1f2433; padding: 0.6rem; }
+.cycle-step svg { display: block; width: 100%; height: auto; }
+.cycle-step .num { position: absolute; top: -0.75rem; left: -0.75rem; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--sulfur); color: #1f2433; border: 2px solid #1f2433; display: grid; place-items: center; font: 700 0.95rem/1 var(--font-display); }
+.cycle-step:not(:last-child) .art::after { content: "→"; position: absolute; top: calc(50% - 0.65rem); right: -1.55rem; font: 700 1.3rem/1 var(--font-display); color: var(--sulfur-ink); }
+.cycle-return { position: relative; width: calc(52rem * 0.75 + 1.8rem * 0.75); margin: -1.6rem auto 0; height: 1.6rem; border: 2px dashed var(--sulfur-ink); border-top: 0; border-radius: 0 0 14px 14px; opacity: .8; }
+.cycle-return::before { content: ""; position: absolute; left: -7px; top: -6px; border: 6px solid transparent; border-bottom: 9px solid var(--sulfur-ink); border-top: 0; }
+.cycle-return span { position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 50%); background: var(--bg); padding: 0 0.6rem; color: var(--sulfur-ink); font: 600 0.85rem/1 var(--font-display); white-space: nowrap; }
+.cycle-step figcaption { display: grid; gap: 0.2rem; }
+.cycle-step figcaption b { font: 700 0.98rem/1.2 var(--font-display); }
+.cycle-step figcaption span { color: var(--muted); font-size: 0.85rem; line-height: 1.4; }
+.cycle-return + .cycle-support { margin-top: 0.4rem; }
+.cycle-support { display: flex; align-items: center; gap: 1rem; max-width: 40rem; margin: -0.6rem auto 0; padding: 0.6rem 1rem; border: 1px dashed var(--line); border-radius: 999px; background: var(--surface); }
+.cycle-support svg { flex: none; width: 4.2rem; height: auto; }
+.cycle-support p { color: var(--muted); font-size: 0.93rem; }
+.cycle-support b { color: var(--ink); }
+@media (max-width: 1000px) and (min-width: 761px) { .cycle { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 40rem; margin-inline: auto; } .cycle-step .art::after { display: none; } }
+@media (max-width: 1000px) { .cycle-return { display: none; } }
+@media (max-width: 760px) { .cycle { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; } .cycle-step { grid-template-columns: minmax(0, 0.65fr) minmax(0, 1fr); align-items: center; gap: 1rem; } .cycle-step .art::after { display: none; } .cycle-support { border-radius: var(--radius); margin-top: 0; } }
+@media (max-width: 480px) { .cycle-step figcaption span { font-size: 0.85rem; } }
+.showcase { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.showcase figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
+.showcase img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: #fff; }
+.showcase figcaption { padding: 0.8rem 0.95rem 0.95rem; display: grid; gap: 0.25rem; border-top: 3px solid var(--sulfur); }
+.showcase figcaption b { font: 700 1.05rem/1.25 var(--font-display); }
+.showcase figcaption span { color: var(--muted); font-size: 0.9rem; }
+@media (max-width: 960px) { .showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .showcase { gap: 0.6rem; } .showcase figcaption span { display: none; } }
+.welcome { display: grid; gap: 1.6rem; justify-items: center; text-align: center; }
+.welcome > .welcome-art { min-width: 0; width: 100%; max-width: 64rem; text-align: left; }
+.welcome-art .cycle { max-width: none; gap: 2.2rem; }
+.welcome-art .cycle-return { width: calc(75% + 1.65rem); margin-top: -0.4rem; }
+.welcome-art .cycle-support { max-width: 46rem; }
+@media (max-width: 1000px) and (min-width: 761px) { .welcome-art .cycle { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.6rem; } .welcome-art .cycle-step:not(:last-child) .art::after { display: block; right: -1.35rem; } }
+.welcome > div { display: grid; gap: 0.9rem; max-width: 64rem; }
+.welcome .lede { font-size: var(--step-1); color: var(--ink); }
+.welcome .lede em { font-style: normal; color: var(--sulfur-ink); }
+.welcome p:not(.lede) { color: var(--muted); }
+.welcome .cta { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+.ticker { display: grid; gap: 0.8rem; padding: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); align-self: start; }
+.ticker-head { display: flex; justify-content: space-between; align-items: baseline; }
+.ticker-head a { font-size: 0.85rem; }
+.ticker-slides { display: grid; }
+.tslide { grid-area: 1 / 1; display: grid; gap: 0.45rem; align-content: start; opacity: 0; visibility: hidden; transition: opacity .5s ease, visibility .5s; }
+.tslide.on { opacity: 1; visibility: visible; }
+.tslide img, .tslide .tph { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: calc(var(--radius) - 2px); border: 1px solid var(--line); display: block; }
+.tmedia { position: relative; display: block; }
+.tmedia .play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 3rem; height: 3rem; border-radius: 50%; display: grid; place-items: center; background: rgba(15, 18, 28, .72); color: #fff; font-size: 1.1rem; padding-left: 0.2rem; }
+.tmedia:hover .play { background: var(--sulfur-ink); }
+.tslide.text-only { align-content: center; }
+.tslide.text-only p { font-size: 1.05rem; line-height: 1.55; }
+.tslide .muted { color: var(--muted); font-size: 0.88rem; }
+.tslide .tlink { font-size: 0.88rem; font-weight: 600; }
+.tslide .tph { background: var(--bg); display: grid; place-items: center; }
+.tslide .tph svg { width: 62%; height: auto; }
+.tslide .when { font: 500 0.78rem/1.4 var(--font-mono); color: var(--muted); }
+.tslide p { font-size: 0.92rem; line-height: 1.5; color: var(--ink); }
+.ticker-nav { display: flex; align-items: center; justify-content: center; gap: 0.35rem; }
+.ticker-nav button { border: 0; background: none; cursor: pointer; color: var(--muted); font: 700 1.6rem/1 var(--font-body, sans-serif); padding: 0.1rem 0.6rem; }
+.ticker-nav button:hover { color: var(--ink); }
+.ticker-nav .dot { width: 0.55rem; height: 0.55rem; padding: 0; border-radius: 50%; background: var(--line); }
+.ticker-nav .dot.on { background: var(--sulfur-ink); }
+@media (prefers-reduced-motion: reduce) { .tslide { transition: none; } }
+.affil { display: grid; gap: 0.6rem; justify-items: start; padding: 1.25rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; color: var(--muted); font-size: 0.92rem; }
+.affil img { height: 3.6rem; width: auto; background: #fff; border-radius: 6px; padding: 0.3rem 0.5rem; }
+.affil:hover { border-color: var(--sulfur); }
+@media (max-width: 860px) { .welcome { grid-template-columns: minmax(0, 1fr); } .banner img { aspect-ratio: 4 / 3; } }
+.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; }
+.hero h1 { font-size: var(--step-4); }
+.hero h1 em { font-style: normal; color: var(--sulfur-ink); }
+.hero .lede { font-size: var(--step-1); color: var(--muted); max-width: 34rem; margin-top: 1rem; }
+.hero .cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.75rem; align-items: center; }
+.btn { display: inline-block; font-weight: 600; padding: 0.6rem 1.1rem; border-radius: var(--radius); text-decoration: none; border: 1px solid var(--ink); color: var(--ink); }
+.btn.solid { background: var(--ink); color: var(--bg); }
+.btn:hover { text-decoration: none; opacity: 0.88; }
+.lattice { position: relative; aspect-ratio: 1 / 0.9; max-width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+.hero-photo { margin: 0; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; overflow: hidden; }
+.hero-photo img { width: 100%; display: block; }
+.hero-photo figcaption { background: var(--surface); border-top: 1px solid var(--line); padding: 0.6rem 0.9rem; color: var(--muted); font: 400 0.78rem/1.4 var(--font-mono); }
+.lattice canvas { width: 100%; height: 100%; display: block; }
+.lattice figcaption { position: absolute; left: 0.9rem; bottom: 0.7rem; right: 0.9rem; display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font: 400 0.75rem/1.3 var(--font-mono); }
+.lattice figcaption i { font-style: normal; display: inline-flex; align-items: center; gap: 0.35rem; }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+/* Research areas */
+.areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.area { background: var(--surface); padding: 1.5rem; display: grid; gap: 0.5rem; align-content: start; }
+.area .eyebrow { color: var(--sulfur-ink); }
+.area p { color: var(--muted); }
+.split { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.split > div:first-child { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1.25rem; }
+.split > div:first-child > p { max-width: 46rem; }
+
+/* News */
+.news-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.news-item { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 1.25rem; padding-block: 1rem; border-bottom: 1px solid var(--line); }
+.news-item .when { font: 500 0.8rem/1.6 var(--font-mono); color: var(--muted); padding-top: 0.15rem; }
+.news-list.compact .news-item > div:last-child { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; align-items: start; }
+.news-list.compact .news-item img { width: 9rem; max-width: 9rem; aspect-ratio: 4 / 3; object-fit: cover; margin-top: 0; }
+@media (max-width: 600px) { .news-list.compact .news-item img { width: 6.5rem; } }
+.more-photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: 0.6rem; max-width: 32rem; }
+.news-list.compact .more-photos { display: none; }
+.news-item p + p { margin-top: 0.35rem; }
+.news-list:not(.compact) .news-item > div:last-child:has(> img) { display: grid; grid-template-columns: 14rem minmax(0, 1fr); column-gap: 1.25rem; row-gap: 0; align-items: start; align-content: start; }
+.news-list:not(.compact) .news-item > div:last-child > img { grid-column: 1; grid-row: 1 / span 3; margin-top: 0; width: auto; max-width: 100%; max-height: 12rem; height: auto; }
+.news-list:not(.compact) .news-item > div:last-child:has(> img) > :not(img) { grid-column: 2; }
+.news-list:not(.compact) .more-photos { grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); max-width: 26rem; }
+@media (max-width: 600px) { .news-list:not(.compact) .news-item > div:last-child:has(> img) { grid-template-columns: 8rem minmax(0, 1fr); column-gap: 0.9rem; } }
+.news-year { display: grid; gap: 1rem; }
+
+/* Team */
+.pi { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 2rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; }
+.pi .bio { display: grid; gap: 0.9rem; max-width: 42rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.chip { font-size: 1rem; padding: 0.3rem 0.8rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: var(--bg); }
+.pi-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
+.icon-link { display: inline-flex; width: 2rem; height: 2rem; border-radius: 50%; }
+.icon-link svg { width: 100%; height: 100%; }
+.icon-link:hover { opacity: 0.8; }
+.avatar { width: 100%; aspect-ratio: 1; max-width: 100%; border-radius: var(--radius); background: var(--bg); border: 1px solid var(--line); display: grid; place-items: center; font: 700 1.6rem/1 var(--font-display); color: var(--muted); overflow: hidden; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.group { display: grid; gap: 1.25rem; }
+.people { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: 1.25rem; }
+.person { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0.6rem 1rem; padding: 1.1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); align-content: start; }
+.person .avatar { font-size: 1.1rem; }
+.person .p-head { align-self: center; min-width: 0; }
+.person .p-body { grid-column: 1 / -1; min-width: 0; }
+.person .p-links { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.45rem; }
+.person .p-links .site-link { margin-top: 0; }
+.icon-link.small { width: 1.6rem; height: 1.6rem; }
+.person.shared { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
+.person.shared .shared-title { font-size: 1.1rem; }
+.person.shared .mini { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0.9rem; align-items: start; }
+.person.shared .mini + .mini { padding-top: 0.9rem; border-top: 1px solid var(--line); }
+.person.shared .mini b { font-family: var(--font-display); font-size: 1rem; }
+.person.shared .mini p.desc { margin-top: 0.3rem; font-size: 0.9rem; }
+.person h3 { font-size: 1.1rem; }
+.person .role { font-size: 0.9rem; color: var(--muted); }
+.person .since { font: 400 0.75rem/1.4 var(--font-mono); color: var(--muted); }
+.person p.desc { font-size: 0.95rem; margin-top: 0.5rem; }
+.person p.fun { font-size: 0.9rem; color: var(--muted); margin-top: 0.35rem; }
+.person .site-link.orcid { display: block; font: 400 0.78rem/1.4 var(--font-mono); }
+.person .site-link { display: inline-block; margin-top: 0.35rem; font-size: 0.85rem; }
+.person .email { font: 400 0.78rem/1.4 var(--font-mono); color: var(--muted); word-break: break-all; margin-top: 0.4rem; }
+.alumni { border-top: 1px solid var(--line); }
+.alumni li { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 1rem; padding-block: 0.7rem; border-bottom: 1px solid var(--line); }
+.alumni li span { color: var(--muted); }
+ul.plain { list-style: none; margin: 0; padding: 0; }
+details.more { border-top: 1px solid var(--line); padding-top: 0.2rem; }
+details.more > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0; font-weight: 600; color: var(--sulfur-ink); }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary .chev { transition: transform 0.2s; }
+details.more[open] > summary .chev { transform: rotate(180deg); }
+.more-body { display: grid; gap: 1.1rem; padding-top: 0.4rem; }
+@media (prefers-reduced-motion: reduce) { details.more > summary .chev { transition: none; } }
+
+/* Publications */
+.pub-tools { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.pub-tools input { font: inherit; padding: 0.55rem 0.8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); width: min(100%, 22rem); }
+.pub-tools .count { color: var(--muted); font-size: 0.9rem; }
+.pub-year { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 1rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+.pub-year > h3 { font-family: var(--font-mono); font-weight: 500; font-size: 1rem; color: var(--sulfur-ink); }
+ol.pubs { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
+ol.pubs li { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); gap: 0.5rem; }
+ol.pubs .n { font: 400 0.8rem/1.9 var(--font-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+ol.pubs .t { font-weight: 600; }
+ol.pubs .j { color: var(--muted); }
+ol.pubs .j em { font-style: italic; }
+.me { box-shadow: inset 0 -0.35em 0 color-mix(in srgb, var(--sulfur) 30%, transparent); }
+
+/* Openings, links, contact */
+.equip { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 1.25rem; }
+.equip figure { margin: 0; display: grid; gap: 0.6rem; align-content: start; }
+.equip img, .equip video { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); background: #111; }
+.equip figcaption { display: grid; gap: 0.2rem; }
+.equip figcaption b { font: 700 1.05rem/1.2 var(--font-display); }
+.equip figcaption span { color: var(--muted); font-size: 0.93rem; }
+@media (max-width: 900px) { .equip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.roles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.role-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; display: grid; gap: 0.6rem; align-content: start; }
+.role-card p { color: var(--muted); }
+.roles .role-card { align-content: start; }
+.split .roles { grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+.role-card .steps { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.3rem; }
+.role-card .steps li::marker { color: var(--sulfur-ink); }
+.role-card .send { color: var(--ink); font-size: 0.95rem; background: var(--bg); border-radius: var(--radius); padding: 0.55rem 0.75rem; }
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: 1rem; }
+.skill { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--sulfur); border-radius: var(--radius); padding: 1.1rem 1.2rem; }
+.skill h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.skill ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.3rem; color: var(--muted); font-size: 0.95rem; }
+.week { display: grid; gap: 1rem; }
+.week-item { display: grid; gap: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem; align-items: center; }
+.week-item.has-photo { grid-template-columns: 12rem minmax(0, 1fr); }
+.week-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: calc(var(--radius) - 2px); display: block; }
+.week-item h3 { font-size: 1.05rem; }
+.week-item p { color: var(--muted); margin-top: 0.25rem; }
+@media (max-width: 600px) { .week-item.has-photo { grid-template-columns: 7rem minmax(0, 1fr); align-items: start; } }
+.note { border-left: 3px solid var(--sulfur); padding: 0.25rem 0 0.25rem 1rem; max-width: 46rem; color: var(--muted); }
+.jump { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.jump a { font-size: 0.88rem; padding: 0.3rem 0.75rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; }
+.jump a:hover { border-color: var(--sulfur); }
+.links > div { scroll-margin-top: 6rem; }
+.links { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); gap: 2rem; }
+.links ul { display: grid; gap: 0.5rem; }
+.links h3 { margin-bottom: 0.75rem; font-size: 1rem; }
+.links li small { display: block; color: var(--muted); font-size: 0.85rem; }
+.contact { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+.contact div { display: grid; gap: 0.3rem; }
+.copy { font: inherit; font-size: 0.8rem; border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: var(--radius); padding: 0.1rem 0.5rem; cursor: pointer; margin-left: 0.4rem; }
+footer.site { border-top: 1px solid var(--line); }
+footer.site .wrap { padding-block: 1.5rem; display: flex; gap: 1rem 2rem; flex-wrap: wrap; justify-content: space-between; color: var(--muted); font-size: 0.9rem; }
+footer.site nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+
+.news-item img, .figure img { width: 100%; max-width: 32rem; border-radius: var(--radius); border: 1px solid var(--line); margin-top: 0.6rem; display: block; }
+.area img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius); }
+.figure { margin: 0; display: grid; gap: 0.5rem; }
+.figure img { max-width: 100%; margin: 0; }
+.figure figcaption { color: var(--muted); font-size: 0.9rem; }
+.loading { color: var(--muted); padding-block: 4rem; }
+.timeline { display: grid; gap: 0.4rem; }
+.timeline li { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 0.75rem; }
+.timeline .mono { color: var(--muted); padding-top: 0.15rem; }
+@media (max-width: 600px) { .timeline li { grid-template-columns: minmax(0, 1fr); gap: 0; } }
+.role-card .cite { font-size: 0.9rem; margin-top: auto; padding-top: 0.25rem; }
+.vision { font-size: var(--step-1); line-height: 1.55; max-width: 44rem; }
+.papers { display: grid; gap: 1.25rem; }
+.papers-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.paper { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; display: grid; gap: 0.7rem; align-content: start; }
+.paper p { color: var(--muted); }
+.paper.featured { border: 2px solid var(--sulfur); padding: 1.8rem; gap: 0.9rem; }
+.paper.featured h3 { font-size: var(--step-2); }
+.paper.featured p { color: var(--ink); font-size: var(--step-1); line-height: 1.55; }
+.paper-top { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+.badge { font: 500 0.72rem/1 var(--font-mono); letter-spacing: 0.05em; text-transform: uppercase; padding: 0.35rem 0.55rem; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.badge.lab { background: var(--sulfur); border-color: var(--sulfur); color: #151a28; }
+.paper-ref { border-top: 1px solid var(--line); padding-top: 0.8rem; display: grid; gap: 0.3rem; font-size: 0.92rem; }
+.paper-ref .t { font-weight: 600; }
+.paper-ref .j { color: var(--muted); }
+.paper-ref .read { font-weight: 600; margin-top: 0.2rem; }
+ol.pubs li.lab-paper { background: color-mix(in srgb, var(--sulfur) 12%, var(--surface)); border-left: 3px solid var(--sulfur); padding: 0.8rem 0.9rem 0.8rem 0.6rem; border-radius: var(--radius); }
+ol.pubs li.lab-paper .badge { display: inline-block; margin-bottom: 0.4rem; }
+@media (max-width: 860px) { .papers-pair { grid-template-columns: minmax(0, 1fr); } }
+.pub-section { display: grid; gap: 1.5rem; }
+.pub-section + .pub-section { margin-top: 2.5rem; }
+.pub-section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-bottom: 2px solid var(--ink); padding-bottom: 0.6rem; }
+.pub-section-head h2 { font-size: var(--step-2); }
+.pub-section .count { color: var(--muted); font: 400 0.85rem/1 var(--font-mono); }
+details.older { border-top: 1px solid var(--line); }
+details.older > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 1rem; padding: 1rem 1.1rem; margin-top: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); font: 700 var(--step-1)/1.2 var(--font-display); }
+details.older > summary::-webkit-details-marker { display: none; }
+details.older > summary:hover { border-color: var(--sulfur); }
+details.older > summary .chev { margin-left: auto; font-size: 1.3rem; color: var(--sulfur-ink); transition: transform 0.2s; }
+details.older[open] > summary .chev { transform: rotate(180deg); }
+details.older[open] > summary { margin-bottom: 1.5rem; }
+details.older > .pub-year + .pub-year, details.older > .pub-year { margin-top: 1.5rem; }
+@media (prefers-reduced-motion: reduce) { details.older > summary .chev { transition: none; } }
+details.news-year { border-top: 0; }
+.news-older { display: grid; gap: 0.8rem; }
+details.news-year > summary { margin-top: 0; }
+details.news-year > summary .mono { font-size: var(--step-2); color: var(--sulfur-ink); }
+details.news-year > summary .count { color: var(--muted); font: 400 0.9rem/1 var(--font-body, inherit); }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1.25rem; }
+.gallery { align-items: start; }
+.gallery img { width: 100%; height: auto; aspect-ratio: 1.85; object-fit: cover; object-position: center bottom; }
+.home-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: stretch; }
+.home-pair > .ticker { align-self: stretch; align-content: start; grid-template-rows: auto 1fr auto; }
+.home-pair h2 { font-size: var(--step-1); }
+.home-pair .ticker-head { align-items: center; }
+.papers-tk .pdesc { font-size: 0.9rem; color: var(--muted); }
+.home-pair .tslide img { aspect-ratio: 16 / 9; }
+.papers-tk .tslide img { object-fit: contain; background: #fff; }
+.funders-mini { display: grid; gap: 0.9rem; align-content: start; padding: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); align-self: stretch; }
+.funders-mini .logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 6rem; gap: 0.8rem; }
+.funders-mini .logos > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+.funders-mini .logos > * { display: flex; align-items: center; justify-content: center; padding: 0.8rem 1rem; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-sizing: border-box; }
+.funders-mini .logos > a:hover { border-color: var(--sulfur); }
+.funders-mini img { display: block; max-height: 4.4rem; max-width: 100%; width: auto; height: auto; object-fit: contain; }
+.funders-mini span { font-size: 0.85rem; color: #1f2433; }
+.funders-row { padding: 0; background: none; border: 0; }
+.funders-row .logos { grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); grid-auto-rows: 5.5rem; }
+.funders-row .logos > :last-child:nth-child(odd) { grid-column: auto; }
+.funders-row img { max-height: 3.8rem; }
+@media (max-width: 860px) { .home-pair { grid-template-columns: minmax(0, 1fr); } }
+.funders { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1.25rem; }
+.funder { display: grid; gap: 0.3rem; align-content: start; padding-top: 0.9rem; border-top: 2px solid var(--sulfur); }
+.funder img { height: 3.4rem; width: auto; max-width: 100%; object-fit: contain; object-position: left; margin-bottom: 0.4rem; background: #fff; border-radius: 6px; padding: 0.3rem 0.45rem; box-sizing: border-box; }
+.funder b { font-family: var(--font-display); font-size: 1.1rem; }
+.funder a { color: var(--ink); text-decoration: none; }
+.funder a:hover { text-decoration: underline; }
+.funder span { color: var(--muted); font-size: 0.92rem; }
+.media-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1.25rem; }
+.media-item { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem; display: grid; gap: 0.4rem; align-content: start; }
+.media-item .kind { color: var(--selenium); }
+.media-item p { color: var(--muted); font-size: 0.92rem; }
+.media-item img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center top; border-radius: calc(var(--radius) - 4px); display: block; margin-bottom: 0.4rem; }
+@media (max-width: 860px) {
+  .hero, .split { grid-template-columns: minmax(0, 1fr); }
+  .roles, .contact { grid-template-columns: minmax(0, 1fr); }
+  .pi { grid-template-columns: minmax(0, 1fr); }
+  .pi .avatar { max-width: 9rem; }
+}
+@media (max-width: 600px) {
+  .areas { grid-template-columns: minmax(0, 1fr); }
+  .news-item, .alumni li, .pub-year { grid-template-columns: minmax(0, 1fr); gap: 0.3rem; }
+  nav.main a { padding: 0.3rem 0.45rem; font-size: 0.9rem; }
+}
+</style>
+
+</head><body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Iyer Lab home">
+      <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#151a28"/><path d="M24 20.5 C20.3 16.8 20 7.5 24 7.5 C28 7.5 27.7 16.8 24 20.5 Z" fill="#f0c232"/><g stroke="#e7e9f0" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="24" x2="11" y2="34"/><line x1="24" y1="24" x2="37" y2="34"/><line x1="24" y1="24" x2="24" y2="39"/></g><circle cx="11" cy="34" r="4.4" fill="#f0c232"/><circle cx="37" cy="34" r="4.4" fill="#f0c232"/><circle cx="24" cy="39" r="4.4" fill="#f0c232"/><circle cx="24" cy="24" r="5.2" fill="#e46a5c"/></svg>
+      <div><b>Iyer Lab</b><span>Functional Inorganic Materials</span></div>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/research/">Research</a>
+      <a href="/team/">Team</a>
+      <a href="/publications/">Publications</a>
+      <a href="/news/">News</a>
+      <a href="/join-us/">Join us</a>
+      <a href="/resources/">Resources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="app"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© Iyer Lab 2026 · Department of Chemistry, University of Manitoba</span>
+    <nav aria-label="University links">
+      <a href="https://umanitoba.ca/science/chemistry">Chemistry at UManitoba</a>
+      <a href="https://umanitoba.ca/science/chemistry/graduate-programs-application-info">Graduate program</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   The site's words and photos live in the "content" folder (JSON files)
+   and the "images" folder. Edit them with the Pages CMS editor at
+   https://app.pagescms.org; this file only holds the design.
+   ===================================================================== */
+const FILES = ["lab", "pi", "people", "alumni", "news", "media", "publications", "links"];
+const GROUP_ORDER = ["Postdoctoral scholars", "Graduate students", "Undergraduate researchers", "Staff", "Visitors"];
+let SITE = null;
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const paras = s => String(s || "").split(/\n\s*\n/).filter(Boolean).map(p => `<p>${p}</p>`).join("");
+const initials = n => String(n).replace(/\(.*?\)/g, "").trim().split(/\s+/).filter(Boolean).map(w => w[0]).slice(0, 2).join("");
+const avatar = p => `<div class="avatar">${p.photo ? `<img src="${esc(p.photo)}" alt="${esc(p.name)}" loading="lazy">` : esc(initials(p.name))}</div>`;
+const copyBtn = v => `<button class="copy" type="button" data-copy="${esc(v)}">Copy</button>`;
+const groupBy = (list, key, order = []) => {
+  const keys = [...new Set(list.map(x => x[key]))].sort((a, b) => {
+    const ia = order.indexOf(a), ib = order.indexOf(b);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+  });
+  return keys.map(k => ({ key: k, items: list.filter(x => x[key] === k) }));
+};
+
+const contact = () => `
+  <div class="contact">
+    <div><span class="eyebrow">Email</span><span>${esc(SITE.lab.email)}${copyBtn(SITE.lab.email)}</span></div>
+    <div><span class="eyebrow">Phone</span><span>${esc(SITE.lab.phone)}</span></div>
+    <div><span class="eyebrow">Find us</span><span>${esc(SITE.lab.address)}</span></div>
+  </div>`;
+
+/* Plain-text description for a photo, taken from the story or title next to it. */
+const altOf = s => String(s || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim().slice(0, 150);
+
+const newsItems = items => `<div class="news-list">${items.map(n =>
+  `<div class="news-item"><div class="when">${n.when}</div><div><p>${n.text}</p>${n.photo ? `<img src="${esc(n.photo)}" alt="${esc(altOf(n.text))}" loading="lazy">` : ""}${(n.more_photos || []).length ? `<div class="more-photos">${n.more_photos.map(m => `<img src="${esc(m)}" alt="${esc(altOf(n.text))}" loading="lazy">`).join("")}</div>` : ""}</div></div>`).join("")}</div>`;
+
+const TICKER_COUNT = 6;
+const ticker = () => {
+  const media = (SITE.media || []).filter(m => m.on_home).slice(0, TICKER_COUNT).map(m => ({ ...m, type: "media" }));
+  const news = (SITE.news || []).filter(n => !n.hide_on_home).slice(0, Math.max(0, TICKER_COUNT - media.length)).map(n => ({ ...n, type: "news" }));
+  const items = [];
+  news.forEach((n, i) => { items.push(n); if (i % 2 === 0 && media.length) items.push(media.shift()); });
+  items.push(...media);
+  items.length = Math.min(items.length, TICKER_COUNT);
+  if (!items.length) return "";
+  const verb = k => ({ Podcast: "Listen", Video: "Watch" })[k] || "Open";
+  return `<aside class="ticker" aria-roledescription="carousel" aria-label="Latest news">
+        <div class="ticker-head"><h2>Latest news</h2><a href="/news/">All news</a></div>
+        <div class="ticker-slides" aria-live="polite">${items.map((n, i) => `
+          <article class="tslide${i ? "" : " on"}${n.photo ? "" : " text-only"}" aria-roledescription="slide" aria-label="${i + 1} of ${items.length}"${i ? ' aria-hidden="true"' : ""}>
+            ${n.type === "media"
+              ? `<a class="tmedia" href="${esc(n.link)}">${n.photo ? `<img src="${esc(n.photo)}" alt="${esc(altOf(n.title))}" loading="lazy">` : ""}<span class="play" aria-hidden="true">▶</span></a>
+            <span class="when">${n.kind}${n.year ? ` · ${n.year}` : ""}</span><p><b>${n.title}</b><br><span class="muted">${n.outlet}</span></p>${n.link ? `<a class="tlink" href="${esc(n.link)}">${verb(n.kind)} →</a>` : ""}`
+              : `${n.photo ? `<img src="${esc(n.photo)}" alt="${esc(altOf(n.text))}" loading="lazy">` : ""}
+            <span class="when">${n.when}</span><p>${n.text}</p>`}
+          </article>`).join("")}
+        </div>
+        <div class="ticker-nav"><button type="button" data-tk="-1" aria-label="Previous news">‹</button>${items.map((_, i) => `<button type="button" class="dot${i ? "" : " on"}" data-tk-go="${i}" aria-label="News ${i + 1}"></button>`).join("")}<button type="button" data-tk="1" aria-label="Next news">›</button></div>
+      </aside>`;
+};
+let tickerTimers = [];
+function startTicker() { document.querySelectorAll(".ticker").forEach(startOneTicker); }
+function startOneTicker(box) {
+  const slides = [...box.querySelectorAll(".tslide")], dots = [...box.querySelectorAll(".dot")];
+  let cur = 0, paused = false;
+  const show = i => {
+    cur = (i + slides.length) % slides.length;
+    slides.forEach((s, k) => { s.classList.toggle("on", k === cur); s.setAttribute("aria-hidden", k === cur ? "false" : "true"); });
+    dots.forEach((d, k) => d.classList.toggle("on", k === cur));
+  };
+  box.addEventListener("click", e => {
+    const b = e.target.closest("[data-tk],[data-tk-go]"); if (!b) return;
+    show(b.dataset.tkGo != null ? +b.dataset.tkGo : cur + +b.dataset.tk);
+  });
+  box.addEventListener("mouseenter", () => paused = true);
+  box.addEventListener("mouseleave", () => paused = false);
+  box.addEventListener("focusin", () => paused = true);
+  box.addEventListener("focusout", () => paused = false);
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches && slides.length > 1)
+    tickerTimers.push(setInterval(() => { if (!paused && !document.hidden) show(cur + 1); }, +(box.dataset.interval || 6000)));
+}
+
+const O = 'stroke="#1f2433" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+const CYCLE = [
+  { key: "synthesis", title: "Make new materials", text: "High- and low-temperature routes to compounds no one has made.", bg: "#ffe9d9", svg: `
+    <text x="60" y="20" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2433">High T</text>
+    <text x="182" y="20" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2433">Low T</text>
+    <path d="M120 10 V160" stroke="#1f2433" stroke-width="2" stroke-dasharray="5 6" opacity=".35"/>
+    <path d="M40 40 q5 -7 0 -13 M60 38 q5 -7 0 -13 M80 40 q5 -7 0 -13" fill="none" stroke="#ff7a3d" stroke-width="3" stroke-linecap="round"/>
+    <defs><radialGradient id="glow" cx="50%" cy="55%" r="65%"><stop offset="0" stop-color="#fff3b0"/><stop offset=".55" stop-color="#ffb347"/><stop offset="1" stop-color="#ff6a3d"/></radialGradient></defs>
+    <rect x="12" y="50" width="96" height="92" rx="12" fill="#a9b1c2" ${O}/>
+    <rect x="22" y="60" width="76" height="40" rx="8" fill="url(#glow)" ${O}/>
+    <rect x="32" y="74" width="56" height="13" rx="6.5" fill="#eef8ff" fill-opacity=".85" stroke="#1f2433" stroke-width="2"/>
+    <rect x="36" y="77" width="20" height="7" rx="3.5" fill="#e0a91b"/>
+    <rect x="22" y="110" width="50" height="22" rx="4" fill="#1f2433"/>
+    <text x="47" y="126" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#ff8a5c">900°C</text>
+    <circle cx="88" cy="121" r="7" fill="#ffd166" ${O}/>
+    <path d="M172 46 h18 v26 l26 50 h-70 l26 -50z" fill="#eef8ff" ${O}/>
+    <path d="M162 98 h34 l13 24 h-60z" fill="#7cc4f2"/>
+    <path d="M172 46 h18 v26 l26 50 h-70 l26 -50z" fill="none" ${O}/>
+    <circle cx="172" cy="110" r="3.5" fill="#fff"/><circle cx="186" cy="104" r="2.5" fill="#fff"/><circle cx="192" cy="114" r="3" fill="#fff"/>
+    <rect x="134" y="124" width="96" height="20" rx="5" fill="#a9b1c2" ${O}/>
+    <circle cx="214" cy="134" r="5" fill="#ff8a5c" stroke="#1f2433" stroke-width="2"/>` },
+  { key: "structure", title: "Solve the structure", text: "X-ray diffraction shows how the atoms are arranged.", bg: "#e3efff", svg: `
+    <rect x="8" y="80" width="30" height="26" rx="5" fill="#a9b1c2" ${O}/>
+    <text x="23" y="72" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2433">X-ray</text>
+    <path d="M38 93 H70" stroke="#ffb020" stroke-width="5" stroke-linecap="round"/>
+    ${[34,62,93,124,152].map(y => `<path d="M90 93 L186 ${y}" stroke="#ffb020" stroke-width="2" opacity=".75"/>`).join("")}
+    <polygon points="78,80 92,74 104,82 102,104 88,112 76,102" fill="#bf4a6b" ${O}/>
+    <polygon points="78,80 92,74 104,82 90,88" fill="#ee8aa6" stroke="#1f2433" stroke-width="2" stroke-linejoin="round"/>
+    <rect x="186" y="18" width="42" height="150" rx="7" fill="#1f2433"/>
+    ${[[207,34,5],[207,62,4],[207,93,6],[207,124,4],[207,152,5],[198,48,2.5],[216,78,2.5],[198,108,2.5],[216,138,2.5]].map(([x,y,r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="#ffd166"/>`).join("")}` },
+  { key: "properties", title: "Study the properties", text: "Optical, electronic and magnetic behaviour.", bg: "#dcf4ea", svg: `
+    <text x="14" y="22" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2433">Semiconductors</text>
+    <path d="M12 52 q8 -14 16 0 t16 0 t16 0 t16 0 t12 0" fill="none" stroke="#e5484d" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="90" y="34" width="34" height="36" rx="5" fill="#bf4a6b" ${O}/>
+    <path d="M128 52 q4 -12 8 0 t8 0 t8 0 t8 0 t8 0 t8 0 t8 0 t8 0 t8 0 t8 0 t8 0" fill="none" stroke="#2fb34a" stroke-width="3.5" stroke-linecap="round"/>
+    <text x="226" y="104" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2433">Quantum</text>
+    <polygon points="14,156 54,116 226,116 186,156" fill="#b7e6d2" ${O}/>
+    ${[[52,140,1],[88,128,-1],[124,140,1],[160,128,-1],[196,140,1]].map(([x,y,u]) => `<circle cx="${x}" cy="${y}" r="7" fill="#8a5cf6" ${O}/><path d="M${x} ${y} L${x} ${y - 24*u}" stroke="#1f2433" stroke-width="3" stroke-linecap="round"/><path d="M${x-5} ${y - 18*u} L${x} ${y - 25*u} L${x+5} ${y - 18*u}" fill="none" stroke="#1f2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`).join("")}` },
+  { key: "improve", title: "Improve the synthesis", text: "What we learn guides the next reaction.", bg: "#eee8ff", svg: `
+    <rect x="30" y="16" width="160" height="140" rx="12" fill="#ffffff" ${O}/>
+    <rect x="46" y="30" width="70" height="9" rx="4.5" fill="#1f2433" opacity=".8"/>
+    ${[["Temperature",66,158,"#ff7a3d"],["Time",96,126,"#3aa676"],["Ratio",126,146,"#8a5cf6"]].map(([t,y,k,c]) => `<text x="46" y="${y + 4}" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1f2433">${t}</text><rect x="122" y="${y - 3}" width="56" height="6" rx="3" fill="#d8dce6"/><circle cx="${k}" cy="${y}" r="7" fill="${c}" ${O}/>`).join("")}
+    <circle cx="204" cy="148" r="19" fill="#ffd166" ${O}/>
+    <path d="M195 148 a9 9 0 1 1 4 7" fill="none" stroke="#1f2433" stroke-width="3" stroke-linecap="round"/>
+    <path d="M191 142 l4 7 7 -3" fill="none" stroke="#1f2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>` }
+];
+const ML_SVG = `
+    <circle cx="204" cy="34" r="15" fill="#ffd166" ${O}/><rect x="198" y="49" width="12" height="9" rx="2" fill="#a9b1c2" ${O}/>
+    <path d="M204 8 v-4 M224 16 l4 -3 M184 16 l-4 -3" stroke="#ff9f1c" stroke-width="3" stroke-linecap="round"/>
+    <rect x="44" y="34" width="140" height="92" rx="9" fill="#1f2433"/>
+    <rect x="52" y="42" width="124" height="76" rx="4" fill="#ffffff"/>
+    ${(() => { const L = [[76,[56,80,104]],[114,[50,68,86,104]],[152,[68,92]]]; let s = "";
+      for (let i = 0; i < 2; i++) for (const a of L[i][1]) for (const b of L[i+1][1]) s += `<line x1="${L[i][0]}" y1="${a}" x2="${L[i+1][0]}" y2="${b}" stroke="#8aa4d6" stroke-width="1.6"/>`;
+      const cols = ["#e5484d", "#3aa676", "#ffd166"];
+      L.forEach(([x, ys], i) => ys.forEach(y => s += `<circle cx="${x}" cy="${y}" r="6" fill="${cols[i]}" stroke="#1f2433" stroke-width="2"/>`)); return s; })()}
+    <polygon points="30,126 198,126 214,146 14,146" fill="#a9b1c2" ${O}/>
+    <rect x="96" y="132" width="36" height="6" rx="3" fill="#1f2433" opacity=".35"/>`;
+const cycle = () => `
+    <div class="cycle">${CYCLE.map((c, i) => `
+      <figure class="cycle-step"><div class="art" style="background:${c.bg}"><span class="num">${i + 1}</span><svg viewBox="0 0 240 170" role="img" aria-label="${c.title} illustration">${c.svg}</svg></div>
+        <figcaption><b>${c.title}</b><span>${c.text}</span></figcaption></figure>`).join("")}
+    </div>
+    <div class="cycle-return" aria-hidden="true"><span>Repeat with what we learned</span></div>
+    <div class="cycle-support"><svg viewBox="0 0 240 170" aria-hidden="true">${ML_SVG}</svg><p><b>Guided by machine learning and calculations.</b> Data-driven models and DFT help us choose which compounds to make next and understand the ones we find.</p></div>`;
+
+const areaGrid = () => `<div class="areas">${SITE.lab.areas.map(a => `<div class="area">${a.photo ? `<img src="${esc(a.photo)}" alt="${esc(altOf(a.title))}" loading="lazy">` : ""}<span class="eyebrow">${a.tag}</span><h3>${a.title}</h3><p>${a.text}</p></div>`).join("")}</div>`;
+
+const paperTicker = () => {
+  const hs = SITE.lab.highlights || [];
+  if (!hs.length) return "";
+  return `<aside class="ticker papers-tk" data-interval="8000" aria-roledescription="carousel" aria-label="Key research papers">
+        <div class="ticker-head"><h2>Key research papers</h2><a href="/publications/">All papers</a></div>
+        <div class="ticker-slides">${hs.map((x, i) => `
+          <article class="tslide${i ? "" : " on"}${x.image ? "" : " text-only"}" aria-roledescription="slide" aria-label="${i + 1} of ${hs.length}"${i ? ' aria-hidden="true"' : ""}>
+            ${x.image ? `<img src="${esc(x.image)}" alt="${esc(altOf(x.title))}" loading="lazy">` : ""}
+            <span class="when">${x.label}</span><p><b>${x.title}</b><br><span class="muted">${x.citation}</span></p>${x.image ? "" : `<p class="pdesc">${x.text}</p>`}${x.link ? `<a class="tlink" href="${esc(x.link)}">Read the paper →</a>` : ""}
+          </article>`).join("")}
+        </div>
+        <div class="ticker-nav"><button type="button" data-tk="-1" aria-label="Previous paper">‹</button>${hs.map((_, i) => `<button type="button" class="dot${i ? "" : " on"}" data-tk-go="${i}" aria-label="Paper ${i + 1}"></button>`).join("")}<button type="button" data-tk="1" aria-label="Next paper">›</button></div>
+      </aside>`;
+};
+
+const fundersCompact = () => (SITE.lab.funders || []).length ? `
+      <div class="funders-mini"><h2>Supported by</h2><div class="logos">${SITE.lab.funders.map(f => {
+        const inner = f.logo ? `<img src="${esc(f.logo)}" alt="${esc(f.name)}" loading="lazy">` : `<span>${f.name}</span>`;
+        return f.link ? `<a href="${esc(f.link)}" title="${esc(f.name)}">${inner}</a>` : `<div title="${esc(f.name)}">${inner}</div>`;
+      }).join("")}</div></div>` : "";
+
+const fundersRow = () => (SITE.lab.funders || []).length ? `
+    <div class="split"><div><h2>Supported by</h2></div><div class="funders-mini funders-row"><div class="logos">${SITE.lab.funders.map(f => {
+        const inner = f.logo ? `<img src="${esc(f.logo)}" alt="${esc(f.name)}" loading="lazy">` : `<span>${f.name}</span>`;
+        return f.link ? `<a href="${esc(f.link)}" title="${esc(f.name)}">${inner}</a>` : `<div title="${esc(f.name)}">${inner}</div>`;
+      }).join("")}</div></div></div>` : "";
+
+const funders = () => (SITE.lab.funders || []).length ? `
+    <div class="split"><div><h2>Supported by</h2></div>
+      <div class="funders">${SITE.lab.funders.map(f => `<div class="funder">${f.logo ? `<img src="${esc(f.logo)}" alt="${esc(f.name)} logo" loading="lazy">` : ""}<b>${f.link ? `<a href="${esc(f.link)}">${f.name}</a>` : f.name}</b><span>${f.detail || ""}</span></div>`).join("")}</div></div>` : "";
+
+/* Newest first, from "Month YYYY" (or just the year) so new entries land in the right place wherever they are added. */
+const mediaWhen = m => { const t = Date.parse(`1 ${m.date || ""}`); return isNaN(t) ? Date.parse(`1 January ${m.year || 1900}`) : t; };
+const mediaByDate = () => [...(SITE.media || [])].sort((a, b) => mediaWhen(b) - mediaWhen(a));
+const mediaBlock = () => (SITE.media || []).length ? `
+    <div class="split"><div><h2>Talks, features and interviews</h2></div>
+      <div class="media-list">${mediaByDate().map(m => `<div class="media-item">${m.photo ? (m.link ? `<a href="${esc(m.link)}"><img src="${esc(m.photo)}" alt="${esc(altOf(m.title))}" loading="lazy"></a>` : `<img src="${esc(m.photo)}" alt="${esc(altOf(m.title))}" loading="lazy">`) : ""}<span class="eyebrow kind">${m.kind}${m.date ? ` · ${m.date}` : m.year ? ` · ${m.year}` : ""}</span><h3 style="font-size:1.05rem">${m.link ? `<a href="${esc(m.link)}">${m.title}</a>` : m.title}</h3><p>${m.outlet}</p></div>`).join("")}</div></div>` : "";
+
+const paperHighlights = () => {
+  const hs = SITE.lab.highlights || [];
+  if (!hs.length) return "";
+  const card = x => {
+    const p = SITE.publications.find(q => q.link && q.link === x.link) || {};
+    return `<article class="paper${x.featured ? " featured" : ""}">
+      <div class="paper-top"><span class="badge${x.featured ? " lab" : ""}">${x.role || x.label}</span><span class="eyebrow">${x.label}</span></div>
+      <h3>${x.title}</h3>
+      <p>${x.text}</p>
+      <div class="paper-ref">${p.title ? `<div class="t">${p.title}</div>` : ""}
+        <div class="j">${p.authors ? markAuthors(p.authors) + ". " : ""}${p.journal ? `<em>${p.journal}</em> ${p.year}${p.details ? `, ${p.details}` : ""}` : x.citation}</div>
+        ${x.link ? `<a class="read" href="${esc(x.link)}">Read the paper →</a>` : ""}</div>
+    </article>`;
+  };
+  const feat = hs.filter(x => x.featured), rest = hs.filter(x => !x.featured);
+  return `<div class="split"><div><h2>Key research papers</h2><p><a href="/publications/">All publications</a></p></div>
+    <div class="papers">${feat.map(card).join("")}<div class="papers-pair">${rest.map(card).join("")}</div></div></div>`;
+};
+
+const ICONS = {
+  scholar: '<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#4285F4"/><path d="M16 7 5 14.5h22z" fill="#fff"/><circle cx="16" cy="19.5" r="5.5" fill="#fff"/></svg>',
+  orcid: '<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#A6CE39"/><rect x="9" y="12.5" width="2.6" height="11" fill="#fff"/><circle cx="10.3" cy="9.2" r="1.6" fill="#fff"/><path d="M14.5 12.5h4.2c3.6 0 5.8 2.3 5.8 5.5s-2.2 5.5-5.8 5.5h-4.2zm2.6 2.3v6.4h1.5c2.2 0 3.3-1.4 3.3-3.2s-1.1-3.2-3.3-3.2z" fill="#fff"/></svg>'
+};
+const linkIcon = l => {
+  const k = /scholar\.google/.test(l.link) ? "scholar" : /orcid\.org/.test(l.link) ? "orcid" : "";
+  return k ? `<a class="icon-link" href="${esc(l.link)}" title="${esc(l.label)}" aria-label="${esc(l.label)}">${ICONS[k]}</a>` : `<a href="${esc(l.link)}">${l.label}</a>`;
+};
+
+const pages = {
+  home: () => `
+    <div class="intro">
+      <p class="eyebrow">Department of Chemistry · University of Manitoba</p>
+      <h1>${SITE.lab.name}</h1>
+      ${SITE.lab.subtitle ? `<p class="subhead">${SITE.lab.subtitle}</p>` : ""}
+    </div>
+    <div class="welcome">
+      <div>
+        <h2>Welcome to the Iyer Lab</h2>
+        <p class="lede">${SITE.lab.tagline.replace("chalcogenide", '<em>chalcogenide</em>')}</p>
+        ${SITE.lab.welcome ? paras(SITE.lab.welcome) : ""}
+      </div>
+      <div class="welcome-art">
+    ${SITE.lab.show_cycle !== false ? cycle() : (SITE.lab.showcase || []).length
+        ? `<div class="showcase">${SITE.lab.showcase.map(x => `<figure><img src="${esc(x.photo)}" alt="${esc(x.label)}"><figcaption><b>${x.label}</b>${x.text ? `<span>${x.text}</span>` : ""}</figcaption></figure>`).join("")}</div>`
+        : SITE.lab.hero_photo
+        ? `<figure class="banner"><img src="${esc(SITE.lab.hero_photo)}" alt="${esc(SITE.lab.hero_caption || "")}">${SITE.lab.hero_caption ? `<figcaption>${SITE.lab.hero_caption}</figcaption>` : ""}</figure>`
+        : `<figure class="lattice" style="margin:0">
+        <canvas id="lattice" aria-label="A slowly rotating model of a tetrahedral crystal lattice" role="img"></canvas>
+        <figcaption><span><i><span class="dot" style="background:var(--selenium)"></span>M</i>&nbsp;&nbsp;<i><span class="dot" style="background:var(--sulfur)"></span>Q = S, Se</i></span><span>MQ<sub>4</sub> tetrahedra</span></figcaption>
+      </figure>`}
+      </div>
+      <div class="cta">
+          <a class="btn solid" href="/research/">Our research</a>
+          <a class="btn" href="/team/">Meet the team</a>
+          <a class="btn" href="/join-us/">Join the lab</a>
+        </div>
+    </div>
+    <div class="home-pair">${paperTicker()}${ticker()}</div>
+    ${contact()}`,
+
+  research: () => `
+    <div class="page-head"><h1 style="font-size:var(--step-3)">From flux to function</h1><p>${SITE.lab.research_intro}</p></div>
+    <div class="split"><div><h2>What we work on</h2></div>${areaGrid()}</div>
+    <div class="split"><div><h2>How we make materials</h2></div>
+      <div class="roles">${SITE.lab.methods.map(m => `<div class="role-card"><h3>${m.title}</h3><p>${m.text}</p></div>`).join("")}</div></div>
+    ${(SITE.lab.equipment || []).length ? `<div class="split"><div><h2>Our equipment</h2></div>
+      <div class="equip">${SITE.lab.equipment.map(e => `<figure>${e.video ? `<video src="${e.video}" poster="${e.photo}" controls muted playsinline preload="none"></video>` : `<img src="${esc(e.photo)}" alt="${esc(altOf(e.title))}" loading="lazy">`}<figcaption><b>${e.title}</b><span>${e.text}</span></figcaption></figure>`).join("")}</div></div>` : ""}
+    ${SITE.lab.vision ? `<div class="split"><div><h2>Our vision</h2></div><p class="vision">${SITE.lab.vision}</p></div>` : ""}
+    ${fundersRow()}
+    ${(SITE.lab.collaborators || []).length ? `<div class="split"><div><h2>Who we work with</h2></div>
+      <div class="links">${groupBy(SITE.lab.collaborators, "group", ["In Manitoba", "International"]).map(g => `<div><h3 class="eyebrow">${g.key}</h3><ul class="plain">${g.items.map(c => `<li><b>${c.name}</b><small>${c.affiliation}</small></li>`).join("")}</ul></div>`).join("")}</div></div>` : ""}
+    ${paperHighlights()}`,
+
+  team: () => {
+    const pi = SITE.pi;
+    return `
+    <div class="page-head"><h1 style="font-size:var(--step-3)">Current group</h1></div>
+    ${SITE.lab.group_photo ? `<figure class="figure"><img src="${esc(SITE.lab.group_photo)}" alt="The Iyer Lab group">${SITE.lab.group_photo_caption ? `<figcaption>${SITE.lab.group_photo_caption}</figcaption>` : ""}</figure>` : ""}
+    <div class="pi">${avatar(pi)}
+      <div class="bio"><div><p class="eyebrow">Principal investigator</p><h2 style="font-size:var(--step-2);margin-top:0.4rem">${pi.name}</h2><p style="color:var(--muted)">${pi.title}</p></div>
+        ${paras(pi.bio)}
+        <div class="chips">${(pi.interests || []).map(i => `<span class="chip">${i}</span>`).join("")}</div>
+        <p class="pi-contact"><span>${esc(SITE.lab.email)}${copyBtn(SITE.lab.email)}</span>${(pi.links || []).map(linkIcon).join("")}</p>
+        ${(pi.career || []).length ? `<div><p class="eyebrow" style="margin-bottom:0.5rem">Previous positions and education</p><ul class="plain timeline">${pi.career.map(c => `<li><span class="mono">${c.years}</span><span><b>${c.role}</b>, ${c.place}${c.with ? `, with ${c.with_link ? `<a href="${esc(c.with_link)}">${c.with}</a>` : c.with}` : ""}</span></li>`).join("")}</ul></div>` : ""}
+        ${(pi.awards || []).length + (pi.teaching || []).length ? `<details class="more"><summary><span>Awards and teaching</span><span class="chev" aria-hidden="true">▾</span></summary><div class="more-body">
+        ${(pi.awards || []).length ? `<div><p class="eyebrow" style="margin-bottom:0.5rem">Awards and honours</p><ul class="plain timeline">${pi.awards.map(a => `<li style="grid-template-columns:minmax(0,1fr)"><span>${a}</span></li>`).join("")}</ul></div>` : ""}
+        ${(pi.teaching || []).length ? `<div><p class="eyebrow" style="margin-bottom:0.5rem">Teaching</p><ul class="plain timeline">${pi.teaching.map(c => `<li><span class="mono">${c.course}</span><span>${c.name}</span></li>`).join("")}</ul></div>` : ""}
+        </div></details>` : ""}
+      </div></div>
+    ${(() => {
+      const all = groupBy(SITE.people, "group", GROUP_ORDER).flatMap(g => g.items);
+      const card = p => `
+      <article class="person">${avatar(p)}<div class="p-head"><h3>${p.name}</h3><div class="role">${p.role}</div>${p.since ? `<div class="since">Since ${p.since}</div>` : ""}</div>
+        <div class="p-body"><p class="desc">${p.about}</p>${p.outside_lab ? `<p class="fun">${p.outside_lab}</p>` : ""}${p.email ? `<div class="email">${esc(p.email)}</div>` : ""}${p.website || p.orcid ? `<div class="p-links">${p.website ? `<a class="site-link" href="${esc(p.website)}">Personal website →</a>` : ""}${p.orcid ? `<a class="icon-link small" href="https://orcid.org/${esc(p.orcid)}" title="ORCID ${esc(p.orcid)}" aria-label="ORCID ${esc(p.orcid)}">${ICONS.orcid}</a>` : ""}</div>` : ""}</div></article>`;
+      const ug = all.filter(p => p.group === "Undergraduate researchers"), rest = all.filter(p => p.group !== "Undergraduate researchers");
+      const shared = ug.length > 1 ? `
+      <article class="person shared"><h3 class="shared-title">Undergraduate researchers</h3>${ug.map(p => `<div class="mini">${avatar(p)}<div style="min-width:0"><b>${p.name}</b><div class="role">${p.role}${p.since ? ` · since ${p.since}` : ""}</div><p class="desc">${p.about}</p></div></div>`).join("")}</article>` : ug.map(card).join("");
+      return `<div class="group"><div class="people">${rest.map(card).join("")}${shared}</div></div>`;
+    })()}
+    ${(SITE.alumni || []).length ? `<details class="older"><summary><span>Former members</span><span class="count">${SITE.alumni.length} ${SITE.alumni.length === 1 ? "person" : "people"}</span><span class="chev" aria-hidden="true">▾</span></summary>
+      <ul class="plain alumni">${SITE.alumni.map(a => `<li><div><b>${a.name}</b><br><span>${a.role}</span></div><div>${a.topic || ""}</div></li>`).join("")}</ul></details>` : ""}
+    ${(SITE.lab.gallery || []).length ? `<div class="group"><h2 style="font-size:var(--step-2)">Past group pictures</h2><div class="gallery">${SITE.lab.gallery.map(g => `<figure class="figure"><img src="${esc(g.photo)}" alt="${esc(g.caption || "")}" loading="lazy">${g.caption ? `<figcaption>${g.caption}</figcaption>` : ""}</figure>`).join("")}</div></div>` : ""}`;
+  },
+
+  publications: () => `
+    <div class="page-head"><h1 style="font-size:var(--step-3)">${SITE.publications.length} papers since ${Math.min(...SITE.publications.map(p => +p.year))}</h1>
+      <p>Papers from the lab and from Abishek's earlier work. Highlighted names are lab members.${SITE.pi.citations ? ` ${SITE.pi.citations}.` : ""}</p></div>
+    <div class="pub-tools"><label class="eyebrow" for="pubq">Filter</label><input id="pubq" type="search" placeholder="Author, journal or year"><span class="count" id="pubcount"></span></div>
+    <div id="publist"></div>`,
+
+  news: () => `
+    <div class="page-head"><h1 style="font-size:var(--step-3)">Lab news</h1></div>
+    ${mediaBlock()}
+    ${(() => {
+      const years = groupBy(SITE.news, "year").sort((a, b) => b.key - a.key);
+      const [latest, ...older] = years;
+      return (latest ? `<div class="split"><div><h2 class="mono" style="font-size:var(--step-2);color:var(--sulfur-ink)">${latest.key}</h2></div>${newsItems(latest.items)}</div>` : "")
+        + (older.length ? `<div class="news-older">${older.map(y => `<details class="older news-year"><summary><span class="mono">${y.key}</span><span class="count">${y.items.length} ${y.items.length === 1 ? "story" : "stories"}</span><span class="chev" aria-hidden="true">▾</span></summary>${newsItems(y.items)}</details>`).join("")}</div>` : "");
+    })()}`,
+
+  openings: () => `
+    <div class="page-head"><h1 style="font-size:var(--step-3)">Work with us on new materials</h1><p>${SITE.lab.openings_intro}</p></div>
+    <div class="split"><div><h2>Find your path</h2></div>
+      <div class="roles">${SITE.lab.openings.map(o => `<div class="role-card"><h3>${o.who}</h3><p>${o.text}</p>${(o.steps || []).length ? `<ul class="steps">${o.steps.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}${o.send ? `<p class="send"><b>What to send:</b> ${o.send}</p>` : ""}</div>`).join("")}</div></div>
+    ${(SITE.lab.skills || []).length ? `<div class="split"><div><h2>Skills you take with you</h2><p style="color:var(--muted)">Whatever your project, you leave knowing how to make, solve and measure a new material.</p></div>
+      <div class="skills">${SITE.lab.skills.map(g => `<div class="skill"><h3>${g.group}</h3><ul>${g.items.map(x => `<li>${x}</li>`).join("")}</ul></div>`).join("")}</div></div>` : ""}
+    ${(SITE.lab.week || []).length ? `<div class="split"><div><h2>What it's like here</h2><p><a href="/news/">See more in the news</a></p></div>
+      <div class="week">${SITE.lab.week.map(w => `<div class="week-item${w.photo ? " has-photo" : ""}">${w.photo ? `<img src="${esc(w.photo)}" alt="${esc(altOf(w.title))}" loading="lazy">` : ""}<div><h3>${w.title}</h3><p>${w.text}</p></div></div>`).join("")}</div></div>` : ""}
+    <p class="note">Ready to reach out? Check the <a href="https://umanitoba.ca/science/chemistry/graduate-programs-application-info">graduate admission requirements</a> if you are applying for grad school, then email Abishek using the details below.</p>
+    ${contact()}`,
+
+  links: () => `
+    <div class="page-head"><h1 style="font-size:var(--step-3)">Useful links</h1></div>
+    <div class="links">${groupBy(SITE.links, "group").map((g, i) => `<div id="lg${i}"><h3 class="eyebrow">${g.key}</h3><ul class="plain">${g.items.map(l =>
+      `<li><a href="${esc(l.link)}">${l.name}</a>${l.note ? `<small>${l.note}</small>` : ""}</li>`).join("")}</ul></div>`).join("")}</div>`
+};
+
+function markAuthors(s) {
+  return String(s || "").replace(/(Abishek (?:K\. )?Iyer|Iyer(?:, A\. K\.)?|Vidyanshu Mishra|Manya Rishi)/g, '<span class="me">$1</span>');
+}
+
+function pubRow(p) {
+  const a = markAuthors(p.authors);
+  const j = `<em>${p.journal}</em> ${p.year}${p.details ? `, ${p.details}` : ""}`;
+  const url = p.link;
+  return `<li${p.lab_paper ? ' class="lab-paper"' : ""}><span class="n">${p.number ?? ""}</span><div>${p.lab_paper ? `<span class="badge lab">From the Iyer Lab</span>` : ""}${p.title ? `<div class="t">${url ? `<a href="${esc(url)}">${p.title}</a>` : p.title}</div>` : ""}
+    <div class="j">${a}${p.title ? ". " + j : " " + (url ? `<a href="${esc(url)}">${j}</a>` : j)}</div></div></li>`;
+}
+
+function renderPubs() {
+  const q = (document.getElementById("pubq")?.value || "").toLowerCase().trim();
+  const all = SITE.publications;
+  const list = all.filter(p => !q || Object.values(p).join(" ").replace(/<[^>]+>/g, "").toLowerCase().includes(q));
+  const byYear = items => [...new Set(items.map(p => +p.year))].sort((a, b) => b - a).map(y => `<div class="pub-year"><h3>${y}</h3><ol class="pubs">${
+    items.filter(p => +p.year === y).sort((a, b) => (b.number || 0) - (a.number || 0)).map(pubRow).join("")}</ol></div>`).join("");
+  const um = list.filter(p => p.at_umanitoba), prior = list.filter(p => !p.at_umanitoba);
+  const recent = prior.filter(p => +p.year >= CUTOFF), older = prior.filter(p => +p.year < CUTOFF);
+  const section = (title, count, body) => `<section class="pub-section"><div class="pub-section-head"><h2>${title}</h2><span class="count">${count} ${count === 1 ? "paper" : "papers"}</span></div>${body}</section>`;
+  let html = "";
+  if (um.length) html += section("At the University of Manitoba", um.length, byYear(um));
+  if (prior.length) html += section("Before the University of Manitoba", prior.length,
+    byYear(recent) + (older.length ? `<details class="older"${q ? " open" : ""}><summary><span>Before ${CUTOFF}</span><span class="count">${older.length} ${older.length === 1 ? "paper" : "papers"}</span><span class="chev" aria-hidden="true">▾</span></summary>${byYear(older)}</details>` : ""));
+  document.getElementById("publist").innerHTML = html || `<p style="color:var(--muted)">No papers match “${esc(q)}”.</p>`;
+  document.getElementById("pubcount").textContent = q ? `${list.length} of ${all.length}` : "";
+}
+const CUTOFF = 2020;
+
+/* ===================== Lattice animation ===================== */
+let stopLattice = null;
+function startLattice() {
+  const cv = document.getElementById("lattice"); if (!cv) return;
+  const ctx = cv.getContext("2d");
+  const css = getComputedStyle(document.documentElement);
+  const col = k => css.getPropertyValue(k).trim();
+  // Zinc-blende-like supercell: cations (M) on fcc sites, anions (Q) in tetrahedral holes.
+  const atoms = [], N = 2;
+  for (let x = 0; x < N; x++) for (let y = 0; y < N; y++) for (let z = 0; z < N; z++) {
+    for (const [a, b, c] of [[0,0,0],[.5,.5,0],[.5,0,.5],[0,.5,.5]]) atoms.push({ p: [x+a, y+b, z+c], t: "M" });
+    for (const [a, b, c] of [[.25,.25,.25],[.75,.75,.25],[.75,.25,.75],[.25,.75,.75]]) atoms.push({ p: [x+a, y+b, z+c], t: "Q" });
+  }
+  atoms.forEach(at => at.p = at.p.map(v => v - N / 2));
+  const bonds = [];
+  atoms.forEach((a, i) => atoms.forEach((b, j) => {
+    if (j <= i || a.t === b.t) return;
+    const d = Math.hypot(a.p[0]-b.p[0], a.p[1]-b.p[1], a.p[2]-b.p[2]);
+    if (Math.abs(d - Math.sqrt(3) / 4) < 0.01) bonds.push([i, j]);
+  }));
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let raf, t0 = performance.now();
+  function frame(now) {
+    const r = cv.getBoundingClientRect(), dpr = devicePixelRatio || 1;
+    if (cv.width !== Math.round(r.width * dpr)) { cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr); }
+    const W = cv.width, H = cv.height, s = Math.min(W, H) * 0.33;
+    const th = reduce ? 0.6 : 0.6 + (now - t0) / 9000, ph = 0.42;
+    const proj = atoms.map(a => {
+      let [x, y, z] = a.p;
+      [x, z] = [x * Math.cos(th) - z * Math.sin(th), x * Math.sin(th) + z * Math.cos(th)];
+      [y, z] = [y * Math.cos(ph) - z * Math.sin(ph), y * Math.sin(ph) + z * Math.cos(ph)];
+      const k = 3.2 / (3.2 + z);
+      return { x: W / 2 + x * s * k, y: H * 0.46 + y * s * k, z, k, t: a.t };
+    });
+    ctx.clearRect(0, 0, W, H);
+    ctx.strokeStyle = col("--muted"); ctx.lineWidth = 1.1 * dpr;
+    bonds.forEach(([i, j]) => { const a = proj[i], b = proj[j];
+      ctx.globalAlpha = 0.25 + 0.35 * (1 - (a.z + b.z + 2.4) / 4.8);
+      ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); });
+    ctx.globalAlpha = 1;
+    proj.map((p, i) => [p, i]).sort((a, b) => b[0].z - a[0].z).forEach(([p]) => {
+      ctx.fillStyle = p.t === "M" ? col("--selenium") : col("--sulfur");
+      ctx.globalAlpha = 0.55 + 0.45 * (1 - (p.z + 1.2) / 2.4);
+      ctx.beginPath(); ctx.arc(p.x, p.y, (p.t === "M" ? 5 : 7) * dpr * p.k, 0, Math.PI * 2); ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+    if (!reduce) raf = requestAnimationFrame(frame);
+  }
+  raf = requestAnimationFrame(frame);
+  stopLattice = () => cancelAnimationFrame(raf);
+}
+
+
+/* ===================== Router ===================== */
+/* Each page has its own address (/research/, /team/ ...) so search engines can list them; links between pages switch without a reload. */
+const PATHS = { home: "/", research: "/research/", team: "/team/", publications: "/publications/", news: "/news/", openings: "/join-us/", links: "/resources/" };
+const pageFromPath = () => {
+  const old = location.hash.slice(1);
+  if (PATHS[old]) { history.replaceState(null, "", PATHS[old]); return old; }   /* old #team style links */
+  const path = location.pathname.replace(/\/?$/, "/").toLowerCase();
+  return Object.keys(PATHS).find(k => PATHS[k] === path) || "home";
+};
+function route() {
+  if (!SITE) return;
+  const page = pageFromPath();
+  if (stopLattice) { stopLattice(); stopLattice = null; }
+  tickerTimers.forEach(clearInterval); tickerTimers = [];
+  document.getElementById("app").innerHTML = `<section class="page">${pages[page]()}</section>`;
+  document.querySelectorAll("nav.main a").forEach(a => {
+    if (a.getAttribute("href") === PATHS[page]) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+  });
+  document.title = page === "home" ? "Iyer Lab" : `${document.querySelector(`nav.main a[href="${PATHS[page]}"]`).textContent} · Iyer Lab`;
+  document.querySelector('link[rel="canonical"]')?.setAttribute("href", "https://www.iyerlab.ca" + PATHS[page]);
+  if (page === "home") { startLattice(); startTicker(); }
+  if (page === "publications") { renderPubs(); document.getElementById("pubq").addEventListener("input", renderPubs); }
+  window.scrollTo(0, 0);
+  countVisit(page);
+}
+document.addEventListener("click", e => {
+  const a = e.target.closest("a[href]");
+  if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target) return;
+  const href = a.getAttribute("href");
+  if (!Object.values(PATHS).includes(href)) return;
+  e.preventDefault();
+  if (href !== location.pathname) history.pushState(null, "", href);
+  route();
+});
+addEventListener("popstate", route);
+
+/* Visitor counter (GoatCounter). Counts only on the live site, once a site code is set in lab.json. */
+let firstVisit = true;
+/* Opening the site once with ?nocount on a device stops that browser being counted; ?count turns counting back on. */
+const optOut = (() => { try {
+  const q = new URLSearchParams(location.search);
+  if (q.has("nocount")) { localStorage.setItem("iyerlab-nocount", "1"); alert("Your visits from this browser will no longer be counted."); }
+  if (q.has("count")) { localStorage.removeItem("iyerlab-nocount"); alert("Your visits from this browser will be counted again."); }
+  return localStorage.getItem("iyerlab-nocount") === "1";
+} catch (e) { return false; } })();
+function countVisit(page) {
+  if (optOut) return;
+  const code = (SITE.lab.goatcounter || "").trim();
+  if (!code || !/^[a-z0-9-]+$/.test(code) || /^(localhost|127\.|$)|claude|usercontent/.test(location.hostname)) return;
+  const q = new URLSearchParams({ p: PATHS[page], t: document.title, r: firstVisit ? document.referrer : "", s: `${screen.width},${screen.height},${devicePixelRatio || 1}`, rnd: Math.random().toString(36).slice(2) });
+  firstVisit = false;
+  new Image().src = `https://${code}.goatcounter.com/count?${q}`;
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-copy]"); if (!b) return;
+  const done = () => { b.textContent = "Copied"; setTimeout(() => b.textContent = "Copy", 1500); };
+  navigator.clipboard?.writeText(b.dataset.copy).then(done, () => {
+    const r = document.createRange(); r.selectNodeContents(b.previousSibling || b.parentNode); getSelection().removeAllRanges(); getSelection().addRange(r);
+  });
+});
+document.addEventListener("click", e => {
+  const j = e.target.closest("[data-jump]"); if (!j) return;
+  e.preventDefault(); document.getElementById(j.dataset.jump)?.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+});
+
+document.getElementById("app").innerHTML = `<p class="loading">Loading…</p>`;
+Promise.all(FILES.map(f => fetch(`content/${f}.json`, { cache: "no-cache" }).then(r => { if (!r.ok) throw new Error(f); return r.json(); })))
+  .then(data => { SITE = Object.fromEntries(FILES.map((f, i) => [f, data[i]])); route(); })
+  .catch(err => { document.getElementById("app").innerHTML = `<p class="loading">The site content could not be loaded (${esc(err.message)}). Check that the content folder sits next to index.html.</p>`; });
+</script>
+</body></html>

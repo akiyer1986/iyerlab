@@ -37,3 +37,7 @@ Your Google Site keeps working until you make step 2.
 - Photos for the PI, members and news items (the Google Sites images could not be copied automatically).
 - Full titles for older publications.
 - Google Scholar and LinkedIn links (About the PI → Profile links).
+
+## Page addresses
+
+Each page has its own address (www.iyerlab.ca/research/, /team/, /publications/, /news/, /join-us/, /resources/). The folders with those names hold copies of `index.html`. After changing `index.html`, run `python3 tools/build_pages.py` to refresh the copies, the redirects for old addresses and `sitemap.xml`. Editing content in Pages CMS does not need this step.

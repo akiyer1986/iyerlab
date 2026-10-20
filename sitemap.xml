@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.iyerlab.ca/</loc></url>
+  <url><loc>https://www.iyerlab.ca/research/</loc></url>
+  <url><loc>https://www.iyerlab.ca/team/</loc></url>
+  <url><loc>https://www.iyerlab.ca/publications/</loc></url>
+  <url><loc>https://www.iyerlab.ca/news/</loc></url>
+  <url><loc>https://www.iyerlab.ca/join-us/</loc></url>
+  <url><loc>https://www.iyerlab.ca/resources/</loc></url>
 </urlset>

@@ -1,5 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<base href="/">
 <title>Iyer Lab</title>
+<link rel="canonical" href="https://www.iyerlab.ca/">
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="The Iyer Lab at the University of Manitoba makes new chalcogenide crystals for infrared optics, water remediation and quantum materials.">
 <meta property="og:type" content="website">
@@ -385,18 +387,18 @@ details.news-year > summary .count { color: var(--muted); font: 400 0.9rem/1 var
 </head><body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="#home" aria-label="Iyer Lab home">
+    <a class="brand" href="/" aria-label="Iyer Lab home">
       <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#151a28"/><path d="M24 20.5 C20.3 16.8 20 7.5 24 7.5 C28 7.5 27.7 16.8 24 20.5 Z" fill="#f0c232"/><g stroke="#e7e9f0" stroke-width="2.2" stroke-linecap="round"><line x1="24" y1="24" x2="11" y2="34"/><line x1="24" y1="24" x2="37" y2="34"/><line x1="24" y1="24" x2="24" y2="39"/></g><circle cx="11" cy="34" r="4.4" fill="#f0c232"/><circle cx="37" cy="34" r="4.4" fill="#f0c232"/><circle cx="24" cy="39" r="4.4" fill="#f0c232"/><circle cx="24" cy="24" r="5.2" fill="#e46a5c"/></svg>
       <div><b>Iyer Lab</b><span>Functional Inorganic Materials</span></div>
     </a>
     <nav class="main" aria-label="Main">
-      <a href="#home">Home</a>
-      <a href="#research">Research</a>
-      <a href="#team">Team</a>
-      <a href="#publications">Publications</a>
-      <a href="#news">News</a>
-      <a href="#openings">Join us</a>
-      <a href="#links">Resources</a>
+      <a href="/">Home</a>
+      <a href="/research/">Research</a>
+      <a href="/team/">Team</a>
+      <a href="/publications/">Publications</a>
+      <a href="/news/">News</a>
+      <a href="/join-us/">Join us</a>
+      <a href="/resources/">Resources</a>
     </nav>
   </div>
 </header>
@@ -443,8 +445,11 @@ const contact = () => `
     <div><span class="eyebrow">Find us</span><span>${esc(SITE.lab.address)}</span></div>
   </div>`;
 
+/* Plain-text description for a photo, taken from the story or title next to it. */
+const altOf = s => String(s || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim().slice(0, 150);
+
 const newsItems = items => `<div class="news-list">${items.map(n =>
-  `<div class="news-item"><div class="when">${n.when}</div><div><p>${n.text}</p>${n.photo ? `<img src="${esc(n.photo)}" alt="" loading="lazy">` : ""}${(n.more_photos || []).length ? `<div class="more-photos">${n.more_photos.map(m => `<img src="${esc(m)}" alt="" loading="lazy">`).join("")}</div>` : ""}</div></div>`).join("")}</div>`;
+  `<div class="news-item"><div class="when">${n.when}</div><div><p>${n.text}</p>${n.photo ? `<img src="${esc(n.photo)}" alt="${esc(altOf(n.text))}" loading="lazy">` : ""}${(n.more_photos || []).length ? `<div class="more-photos">${n.more_photos.map(m => `<img src="${esc(m)}" alt="${esc(altOf(n.text))}" loading="lazy">`).join("")}</div>` : ""}</div></div>`).join("")}</div>`;
 
 const TICKER_COUNT = 6;
 const ticker = () => {
@@ -457,13 +462,13 @@ const ticker = () => {
   if (!items.length) return "";
   const verb = k => ({ Podcast: "Listen", Video: "Watch" })[k] || "Open";
   return `<aside class="ticker" aria-roledescription="carousel" aria-label="Latest news">
-        <div class="ticker-head"><h2>Latest news</h2><a href="#news">All news</a></div>
+        <div class="ticker-head"><h2>Latest news</h2><a href="/news/">All news</a></div>
         <div class="ticker-slides" aria-live="polite">${items.map((n, i) => `
           <article class="tslide${i ? "" : " on"}${n.photo ? "" : " text-only"}" aria-roledescription="slide" aria-label="${i + 1} of ${items.length}"${i ? ' aria-hidden="true"' : ""}>
             ${n.type === "media"
-              ? `<a class="tmedia" href="${esc(n.link)}">${n.photo ? `<img src="${esc(n.photo)}" alt="" loading="lazy">` : ""}<span class="play" aria-hidden="true">▶</span></a>
+              ? `<a class="tmedia" href="${esc(n.link)}">${n.photo ? `<img src="${esc(n.photo)}" alt="${esc(altOf(n.title))}" loading="lazy">` : ""}<span class="play" aria-hidden="true">▶</span></a>
             <span class="when">${n.kind}${n.year ? ` · ${n.year}` : ""}</span><p><b>${n.title}</b><br><span class="muted">${n.outlet}</span></p>${n.link ? `<a class="tlink" href="${esc(n.link)}">${verb(n.kind)} →</a>` : ""}`
-              : `${n.photo ? `<img src="${esc(n.photo)}" alt="" loading="lazy">` : ""}
+              : `${n.photo ? `<img src="${esc(n.photo)}" alt="${esc(altOf(n.text))}" loading="lazy">` : ""}
             <span class="when">${n.when}</span><p>${n.text}</p>`}
           </article>`).join("")}
         </div>
@@ -557,16 +562,16 @@ const cycle = () => `
     <div class="cycle-return" aria-hidden="true"><span>Repeat with what we learned</span></div>
     <div class="cycle-support"><svg viewBox="0 0 240 170" aria-hidden="true">${ML_SVG}</svg><p><b>Guided by machine learning and calculations.</b> Data-driven models and DFT help us choose which compounds to make next and understand the ones we find.</p></div>`;
 
-const areaGrid = () => `<div class="areas">${SITE.lab.areas.map(a => `<div class="area">${a.photo ? `<img src="${esc(a.photo)}" alt="" loading="lazy">` : ""}<span class="eyebrow">${a.tag}</span><h3>${a.title}</h3><p>${a.text}</p></div>`).join("")}</div>`;
+const areaGrid = () => `<div class="areas">${SITE.lab.areas.map(a => `<div class="area">${a.photo ? `<img src="${esc(a.photo)}" alt="${esc(altOf(a.title))}" loading="lazy">` : ""}<span class="eyebrow">${a.tag}</span><h3>${a.title}</h3><p>${a.text}</p></div>`).join("")}</div>`;
 
 const paperTicker = () => {
   const hs = SITE.lab.highlights || [];
   if (!hs.length) return "";
   return `<aside class="ticker papers-tk" data-interval="8000" aria-roledescription="carousel" aria-label="Key research papers">
-        <div class="ticker-head"><h2>Key research papers</h2><a href="#publications">All papers</a></div>
+        <div class="ticker-head"><h2>Key research papers</h2><a href="/publications/">All papers</a></div>
         <div class="ticker-slides">${hs.map((x, i) => `
           <article class="tslide${i ? "" : " on"}${x.image ? "" : " text-only"}" aria-roledescription="slide" aria-label="${i + 1} of ${hs.length}"${i ? ' aria-hidden="true"' : ""}>
-            ${x.image ? `<img src="${esc(x.image)}" alt="" loading="lazy">` : ""}
+            ${x.image ? `<img src="${esc(x.image)}" alt="${esc(altOf(x.title))}" loading="lazy">` : ""}
             <span class="when">${x.label}</span><p><b>${x.title}</b><br><span class="muted">${x.citation}</span></p>${x.image ? "" : `<p class="pdesc">${x.text}</p>`}${x.link ? `<a class="tlink" href="${esc(x.link)}">Read the paper →</a>` : ""}
           </article>`).join("")}
         </div>
@@ -595,7 +600,7 @@ const mediaWhen = m => { const t = Date.parse(`1 ${m.date || ""}`); return isNaN
 const mediaByDate = () => [...(SITE.media || [])].sort((a, b) => mediaWhen(b) - mediaWhen(a));
 const mediaBlock = () => (SITE.media || []).length ? `
     <div class="split"><div><h2>Talks, features and interviews</h2></div>
-      <div class="media-list">${mediaByDate().map(m => `<div class="media-item">${m.photo ? (m.link ? `<a href="${esc(m.link)}"><img src="${esc(m.photo)}" alt="" loading="lazy"></a>` : `<img src="${esc(m.photo)}" alt="" loading="lazy">`) : ""}<span class="eyebrow kind">${m.kind}${m.date ? ` · ${m.date}` : m.year ? ` · ${m.year}` : ""}</span><h3 style="font-size:1.05rem">${m.link ? `<a href="${esc(m.link)}">${m.title}</a>` : m.title}</h3><p>${m.outlet}</p></div>`).join("")}</div></div>` : "";
+      <div class="media-list">${mediaByDate().map(m => `<div class="media-item">${m.photo ? (m.link ? `<a href="${esc(m.link)}"><img src="${esc(m.photo)}" alt="${esc(altOf(m.title))}" loading="lazy"></a>` : `<img src="${esc(m.photo)}" alt="${esc(altOf(m.title))}" loading="lazy">`) : ""}<span class="eyebrow kind">${m.kind}${m.date ? ` · ${m.date}` : m.year ? ` · ${m.year}` : ""}</span><h3 style="font-size:1.05rem">${m.link ? `<a href="${esc(m.link)}">${m.title}</a>` : m.title}</h3><p>${m.outlet}</p></div>`).join("")}</div></div>` : "";
 
 const paperHighlights = () => {
   const hs = SITE.lab.highlights || [];
@@ -612,7 +617,7 @@ const paperHighlights = () => {
     </article>`;
   };
   const feat = hs.filter(x => x.featured), rest = hs.filter(x => !x.featured);
-  return `<div class="split"><div><h2>Key research papers</h2><p><a href="#publications">All publications</a></p></div>
+  return `<div class="split"><div><h2>Key research papers</h2><p><a href="/publications/">All publications</a></p></div>
     <div class="papers">${feat.map(card).join("")}<div class="papers-pair">${rest.map(card).join("")}</div></div></div>`;
 };
 
@@ -649,9 +654,9 @@ const pages = {
       </figure>`}
       </div>
       <div class="cta">
-          <a class="btn solid" href="#research">Our research</a>
-          <a class="btn" href="#team">Meet the team</a>
-          <a class="btn" href="#openings">Join the lab</a>
+          <a class="btn solid" href="/research/">Our research</a>
+          <a class="btn" href="/team/">Meet the team</a>
+          <a class="btn" href="/join-us/">Join the lab</a>
         </div>
     </div>
     <div class="home-pair">${paperTicker()}${ticker()}</div>
@@ -663,7 +668,7 @@ const pages = {
     <div class="split"><div><h2>How we make materials</h2></div>
       <div class="roles">${SITE.lab.methods.map(m => `<div class="role-card"><h3>${m.title}</h3><p>${m.text}</p></div>`).join("")}</div></div>
     ${(SITE.lab.equipment || []).length ? `<div class="split"><div><h2>Our equipment</h2></div>
-      <div class="equip">${SITE.lab.equipment.map(e => `<figure>${e.video ? `<video src="${e.video}" poster="${e.photo}" controls muted playsinline preload="none"></video>` : `<img src="${e.photo}" alt="${e.title}" loading="lazy">`}<figcaption><b>${e.title}</b><span>${e.text}</span></figcaption></figure>`).join("")}</div></div>` : ""}
+      <div class="equip">${SITE.lab.equipment.map(e => `<figure>${e.video ? `<video src="${e.video}" poster="${e.photo}" controls muted playsinline preload="none"></video>` : `<img src="${esc(e.photo)}" alt="${esc(altOf(e.title))}" loading="lazy">`}<figcaption><b>${e.title}</b><span>${e.text}</span></figcaption></figure>`).join("")}</div></div>` : ""}
     ${SITE.lab.vision ? `<div class="split"><div><h2>Our vision</h2></div><p class="vision">${SITE.lab.vision}</p></div>` : ""}
     ${fundersRow()}
     ${(SITE.lab.collaborators || []).length ? `<div class="split"><div><h2>Who we work with</h2></div>
@@ -723,8 +728,8 @@ const pages = {
       <div class="roles">${SITE.lab.openings.map(o => `<div class="role-card"><h3>${o.who}</h3><p>${o.text}</p>${(o.steps || []).length ? `<ul class="steps">${o.steps.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}${o.send ? `<p class="send"><b>What to send:</b> ${o.send}</p>` : ""}</div>`).join("")}</div></div>
     ${(SITE.lab.skills || []).length ? `<div class="split"><div><h2>Skills you take with you</h2><p style="color:var(--muted)">Whatever your project, you leave knowing how to make, solve and measure a new material.</p></div>
       <div class="skills">${SITE.lab.skills.map(g => `<div class="skill"><h3>${g.group}</h3><ul>${g.items.map(x => `<li>${x}</li>`).join("")}</ul></div>`).join("")}</div></div>` : ""}
-    ${(SITE.lab.week || []).length ? `<div class="split"><div><h2>What it's like here</h2><p><a href="#news">See more in the news</a></p></div>
-      <div class="week">${SITE.lab.week.map(w => `<div class="week-item${w.photo ? " has-photo" : ""}">${w.photo ? `<img src="${esc(w.photo)}" alt="" loading="lazy">` : ""}<div><h3>${w.title}</h3><p>${w.text}</p></div></div>`).join("")}</div></div>` : ""}
+    ${(SITE.lab.week || []).length ? `<div class="split"><div><h2>What it's like here</h2><p><a href="/news/">See more in the news</a></p></div>
+      <div class="week">${SITE.lab.week.map(w => `<div class="week-item${w.photo ? " has-photo" : ""}">${w.photo ? `<img src="${esc(w.photo)}" alt="${esc(altOf(w.title))}" loading="lazy">` : ""}<div><h3>${w.title}</h3><p>${w.text}</p></div></div>`).join("")}</div></div>` : ""}
     <p class="note">Ready to reach out? Check the <a href="https://umanitoba.ca/science/chemistry/graduate-programs-application-info">graduate admission requirements</a> if you are applying for grad school, then email Abishek using the details below.</p>
     ${contact()}`,
 
@@ -818,22 +823,40 @@ function startLattice() {
 
 
 /* ===================== Router ===================== */
+/* Each page has its own address (/research/, /team/ ...) so search engines can list them; links between pages switch without a reload. */
+const PATHS = { home: "/", research: "/research/", team: "/team/", publications: "/publications/", news: "/news/", openings: "/join-us/", links: "/resources/" };
+const pageFromPath = () => {
+  const old = location.hash.slice(1);
+  if (PATHS[old]) { history.replaceState(null, "", PATHS[old]); return old; }   /* old #team style links */
+  const path = location.pathname.replace(/\/?$/, "/").toLowerCase();
+  return Object.keys(PATHS).find(k => PATHS[k] === path) || "home";
+};
 function route() {
   if (!SITE) return;
-  const key = (location.hash || "#home").slice(1);
-  const page = pages[key] ? key : "home";
+  const page = pageFromPath();
   if (stopLattice) { stopLattice(); stopLattice = null; }
   tickerTimers.forEach(clearInterval); tickerTimers = [];
   document.getElementById("app").innerHTML = `<section class="page">${pages[page]()}</section>`;
   document.querySelectorAll("nav.main a").forEach(a => {
-    if (a.getAttribute("href") === "#" + page) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    if (a.getAttribute("href") === PATHS[page]) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
   });
-  document.title = page === "home" ? "Iyer Lab" : `${document.querySelector(`nav.main a[href="#${page}"]`).textContent} · Iyer Lab`;
+  document.title = page === "home" ? "Iyer Lab" : `${document.querySelector(`nav.main a[href="${PATHS[page]}"]`).textContent} · Iyer Lab`;
+  document.querySelector('link[rel="canonical"]')?.setAttribute("href", "https://www.iyerlab.ca" + PATHS[page]);
   if (page === "home") { startLattice(); startTicker(); }
   if (page === "publications") { renderPubs(); document.getElementById("pubq").addEventListener("input", renderPubs); }
   window.scrollTo(0, 0);
   countVisit(page);
 }
+document.addEventListener("click", e => {
+  const a = e.target.closest("a[href]");
+  if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target) return;
+  const href = a.getAttribute("href");
+  if (!Object.values(PATHS).includes(href)) return;
+  e.preventDefault();
+  if (href !== location.pathname) history.pushState(null, "", href);
+  route();
+});
+addEventListener("popstate", route);
 
 /* Visitor counter (GoatCounter). Counts only on the live site, once a site code is set in lab.json. */
 let firstVisit = true;
@@ -848,7 +871,7 @@ function countVisit(page) {
   if (optOut) return;
   const code = (SITE.lab.goatcounter || "").trim();
   if (!code || !/^[a-z0-9-]+$/.test(code) || /^(localhost|127\.|$)|claude|usercontent/.test(location.hostname)) return;
-  const q = new URLSearchParams({ p: "/" + (page === "home" ? "" : page), t: document.title, r: firstVisit ? document.referrer : "", s: `${screen.width},${screen.height},${devicePixelRatio || 1}`, rnd: Math.random().toString(36).slice(2) });
+  const q = new URLSearchParams({ p: PATHS[page], t: document.title, r: firstVisit ? document.referrer : "", s: `${screen.width},${screen.height},${devicePixelRatio || 1}`, rnd: Math.random().toString(36).slice(2) });
   firstVisit = false;
   new Image().src = `https://${code}.goatcounter.com/count?${q}`;
 }
@@ -863,7 +886,6 @@ document.addEventListener("click", e => {
   const j = e.target.closest("[data-jump]"); if (!j) return;
   e.preventDefault(); document.getElementById(j.dataset.jump)?.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
 });
-addEventListener("hashchange", route);
 
 document.getElementById("app").innerHTML = `<p class="loading">Loading…</p>`;
 Promise.all(FILES.map(f => fetch(`content/${f}.json`, { cache: "no-cache" }).then(r => { if (!r.ok) throw new Error(f); return r.json(); })))
