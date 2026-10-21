@@ -9,13 +9,13 @@
     "group": "Finding papers",
     "name": "SciFinder",
     "link": "https://scifinder-n.cas.org/",
-    "note": "Literature, compounds and reactions (UManitoba access)"
+    "note": "Literature and reactions (UManitoba access)"
   },
   {
     "group": "Finding papers",
     "name": "Reaxys",
     "link": "https://www.reaxys.com/",
-    "note": "Compounds, properties and reactions (UManitoba access)"
+    "note": "Compounds and properties (UManitoba access)"
   },
   {
     "group": "Finding papers",
@@ -81,7 +81,7 @@
     "group": "Structure and materials databases",
     "name": "ICSD",
     "link": "https://icsd.fiz-karlsruhe.de/",
-    "note": "Inorganic Crystal Structure Database (UManitoba access)"
+    "note": "Inorganic crystal structures (UManitoba access)"
   },
   {
     "group": "Structure and materials databases",
@@ -189,18 +189,18 @@
     "group": "Writing and presenting",
     "name": "Zotero",
     "link": "https://www.zotero.org/",
-    "note": "Free, open-source reference manager with Word and Google Docs plugins."
+    "note": "Free, open-source reference manager"
   },
   {
     "group": "Writing and presenting",
-    "name": "Mendeley Reference Manager",
+    "name": "Mendeley",
     "link": "https://www.mendeley.com/reference-management/reference-manager",
-    "note": "Free reference manager with PDF annotation and a Word plugin."
+    "note": "Free reference manager with PDF notes"
   },
   {
     "group": "Writing and presenting",
     "name": "EndNote",
     "link": "https://endnote.com/",
-    "note": "Reference manager widely used for manuscripts and theses."
+    "note": "Reference manager for papers and theses"
   }
 ]
