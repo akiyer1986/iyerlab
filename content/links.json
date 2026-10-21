@@ -187,8 +187,20 @@
   },
   {
     "group": "Writing and presenting",
-    "name": "The Elements of Style",
-    "link": "https://www.gutenberg.org/ebooks/37134",
-    "note": "Classic short guide to clear writing"
+    "name": "Zotero",
+    "link": "https://www.zotero.org/",
+    "note": "Free, open-source reference manager with Word and Google Docs plugins."
+  },
+  {
+    "group": "Writing and presenting",
+    "name": "Mendeley Reference Manager",
+    "link": "https://www.mendeley.com/reference-management/reference-manager",
+    "note": "Free reference manager with PDF annotation and a Word plugin."
+  },
+  {
+    "group": "Writing and presenting",
+    "name": "EndNote",
+    "link": "https://endnote.com/",
+    "note": "Reference manager widely used for manuscripts and theses."
   }
 ]
