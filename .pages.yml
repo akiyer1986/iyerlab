@@ -258,4 +258,6 @@ content:
       - { name: group, label: Section, type: string }
       - { name: name, label: Name, type: string }
       - { name: link, label: Link, type: string }
+      - { name: name2, label: "Second name, to show two tools in one entry (optional)", type: string }
+      - { name: link2, label: Second link (optional), type: string }
       - { name: note, label: Note, type: string }

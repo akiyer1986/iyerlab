@@ -30,6 +30,30 @@
     "note": "Sign in for journal access off campus"
   },
   {
+    "group": "Writing and presenting",
+    "name": "ACS Style Guide",
+    "link": "https://pubs.acs.org/doi/book/10.1021/acsguide",
+    "note": "Conventions for chemistry writing"
+  },
+  {
+    "group": "Writing and presenting",
+    "name": "Zotero",
+    "link": "https://www.zotero.org/",
+    "note": "Free, open-source reference manager"
+  },
+  {
+    "group": "Writing and presenting",
+    "name": "Mendeley",
+    "link": "https://www.mendeley.com/reference-management/reference-manager",
+    "note": "Free reference manager with PDF notes"
+  },
+  {
+    "group": "Writing and presenting",
+    "name": "EndNote",
+    "link": "https://endnote.com/",
+    "note": "Reference manager for papers and theses"
+  },
+  {
     "group": "Crystallography software",
     "name": "VESTA",
     "link": "https://jp-minerals.org/vesta/en/",
@@ -39,25 +63,17 @@
     "group": "Crystallography software",
     "name": "OLEX2",
     "link": "https://olex.no/products/olex_software_en.html",
-    "note": "Single-crystal structure refinement"
-  },
-  {
-    "group": "Crystallography software",
-    "name": "SHELX",
-    "link": "https://shelx.uni-goettingen.de/download.php",
-    "note": "Structure solution and refinement"
+    "note": "Single-crystal structure solution and refinement",
+    "name2": "SHELX",
+    "link2": "https://shelx.uni-goettingen.de/download.php"
   },
   {
     "group": "Crystallography software",
     "name": "GSAS-II",
     "link": "https://subversion.xray.aps.anl.gov/trac/pyGSAS/wiki/InstallWindows",
-    "note": "Powder diffraction and Rietveld refinement"
-  },
-  {
-    "group": "Crystallography software",
-    "name": "FullProf",
-    "link": "https://www.ill.eu/sites/fullprof/",
-    "note": "Rietveld refinement of powder data"
+    "note": "Powder diffraction and Rietveld refinement",
+    "name2": "FullProf",
+    "link2": "https://www.ill.eu/sites/fullprof/"
   },
   {
     "group": "Crystallography software",
@@ -76,54 +92,6 @@
     "name": "International Tables for Crystallography",
     "link": "https://it.iucr.org/",
     "note": "The reference for space groups"
-  },
-  {
-    "group": "Structure and materials databases",
-    "name": "ICSD",
-    "link": "https://icsd.fiz-karlsruhe.de/",
-    "note": "Inorganic crystal structures (UManitoba access)"
-  },
-  {
-    "group": "Structure and materials databases",
-    "name": "Crystallography Open Database",
-    "link": "https://www.crystallography.net/cod/",
-    "note": "Free crystal structures"
-  },
-  {
-    "group": "Structure and materials databases",
-    "name": "Materials Project",
-    "link": "https://next-gen.materialsproject.org/",
-    "note": "Computed structures, band gaps and stability"
-  },
-  {
-    "group": "Structure and materials databases",
-    "name": "OQMD",
-    "link": "https://oqmd.org/",
-    "note": "Open Quantum Materials Database"
-  },
-  {
-    "group": "Structure and materials databases",
-    "name": "AFLOW",
-    "link": "https://aflowlib.org/",
-    "note": "Calculated materials properties"
-  },
-  {
-    "group": "Structure and materials databases",
-    "name": "Topological Materials Database",
-    "link": "https://www.topologicalquantumchemistry.com/",
-    "note": "Topological classification of known materials"
-  },
-  {
-    "group": "Structure and materials databases",
-    "name": "AtomWork",
-    "link": "https://crystdb.nims.go.jp/en/",
-    "note": "Inorganic structures and phase diagrams (NIMS)"
-  },
-  {
-    "group": "Structure and materials databases",
-    "name": "NIST Chemistry WebBook",
-    "link": "https://webbook.nist.gov/chemistry/",
-    "note": "Thermochemical and spectral data"
   },
   {
     "group": "Calculations and machine learning",
@@ -156,6 +124,50 @@
     "note": "National computing clusters for Canadian researchers"
   },
   {
+    "group": "Structure and materials databases",
+    "name": "ICSD",
+    "link": "https://icsd.fiz-karlsruhe.de/",
+    "note": "Inorganic crystal structures (UManitoba access)"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "Crystallography Open Database",
+    "link": "https://www.crystallography.net/cod/",
+    "note": "Free crystal structures"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "Materials Project",
+    "link": "https://next-gen.materialsproject.org/",
+    "note": "Computed structures, band gaps and stability",
+    "name2": "OQMD",
+    "link2": "https://oqmd.org/"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "AFLOW",
+    "link": "https://aflowlib.org/",
+    "note": "Calculated materials properties"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "Topological Materials Database",
+    "link": "https://www.topologicalquantumchemistry.com/",
+    "note": "Topological classification of known materials"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "AtomWork",
+    "link": "https://crystdb.nims.go.jp/en/",
+    "note": "Inorganic structures and phase diagrams (NIMS)"
+  },
+  {
+    "group": "Structure and materials databases",
+    "name": "NIST Chemistry WebBook",
+    "link": "https://webbook.nist.gov/chemistry/",
+    "note": "Thermochemical and spectral data"
+  },
+  {
     "group": "Lab references",
     "name": "Shannon ionic radii",
     "link": "http://abulafia.mt.ic.ac.uk/shannon/ptable.php",
@@ -178,29 +190,5 @@
     "name": "Vertere chemical inventory",
     "link": "https://umanitoba.vimenterprise.com/uom",
     "note": "UManitoba sign-in"
-  },
-  {
-    "group": "Writing and presenting",
-    "name": "ACS Style Guide",
-    "link": "https://pubs.acs.org/doi/book/10.1021/acsguide",
-    "note": "Conventions for chemistry writing"
-  },
-  {
-    "group": "Writing and presenting",
-    "name": "Zotero",
-    "link": "https://www.zotero.org/",
-    "note": "Free, open-source reference manager"
-  },
-  {
-    "group": "Writing and presenting",
-    "name": "Mendeley",
-    "link": "https://www.mendeley.com/reference-management/reference-manager",
-    "note": "Free reference manager with PDF notes"
-  },
-  {
-    "group": "Writing and presenting",
-    "name": "EndNote",
-    "link": "https://endnote.com/",
-    "note": "Reference manager for papers and theses"
   }
 ]
