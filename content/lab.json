@@ -107,11 +107,11 @@
       "video": ""
     }
   ],
-  "openings_intro": "No research experience needed to start. You learn by doing: making new compounds with your own hands, solving their structures, and finding out what they can do.",
+  "openings_intro": "We are not currently recruiting graduate students or postdoctoral scholars, but promising candidates are welcome to email their CV and research interests.",
   "openings": [
     {
       "who": "Undergraduates",
-      "text": "Most students start in second or third year. There are three ways in:",
+      "text": "No research experience needed in first to third year; fourth-year students should have some. There are three ways in:",
       "steps": [
         "CHEM 4710 honours project (fall and winter terms)",
         "NSERC USRA summer research award (applications are usually due in winter for the following summer)",
@@ -121,9 +121,9 @@
     },
     {
       "who": "Graduate students (M.Sc. and Ph.D.)",
-      "text": "We look for curiosity about inorganic and structural chemistry. A strong cover letter and hands-on research experience in materials, inorganic or solid-state chemistry, or engineering matter more than grades alone.",
+      "text": "We expect hands-on research experience. Students with experience in inorganic materials synthesis are strongly encouraged to get in touch.",
       "steps": [
-        "Email Abishek first to talk about projects and funding",
+        "Email Abishek your CV and research interests",
         "Apply through the UManitoba graduate program in Chemistry",
         "Ask about fellowships such as NSERC CGS-M and the UM Graduate Fellowship"
       ],
@@ -131,9 +131,9 @@
     },
     {
       "who": "Postdoctoral scholars",
-      "text": "Candidates should have experience characterizing solids and a record of publishing research articles. Applicants with their own funding, such as an NSERC or Banting fellowship, are welcome.",
+      "text": "Candidates should have research experience, ideally in inorganic materials synthesis, and a record of publishing. Applicants with their own funding, such as an NSERC or Banting fellowship, are welcome.",
       "steps": [
-        "Email Abishek to discuss a project idea",
+        "Email Abishek your CV and a project idea",
         "Plan a fellowship application together if you are applying for your own funding"
       ],
       "send": "Your CV, a short research statement, and contact details for two referees."
